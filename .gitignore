@@ -4,12 +4,11 @@
 /app/site/config/*
 !/app/site/config/config.php
 /app/thumbs/*
-/app/assets/css
-/app/assets/js/
+/app/assets/css/app.css
+/app/assets/js/app.js
 /app/assets/avatars
 
 /app/content
 
-.sass-cache
 node_modules
 /log
