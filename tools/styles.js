@@ -3,6 +3,7 @@ var sass = require('node-sass');
 var autoprefixer = require('autoprefixer');
 var postcss = require('postcss');
 var Logger = require('./logger');
+var sassFunctions = require('./lib/sass-functions');
 
 var args = process.argv.slice(2);
 var command = args[0];
@@ -14,9 +15,7 @@ var render = function (options) {
   sass.render({
     file: 'src/css/app.scss',
     outFile: 'app/assets.css/app.css',
-    functions: {
-      test: function (str) { return sass.types.String(str.getValue() + " test"); }
-    },
+    functions: sassFunctions,
     outputStyle: options.compress ? 'compressed' : 'nested',
     sourceMapEmbed: options.compress ? false : true
   }, function (err, result) {

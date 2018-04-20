@@ -12,6 +12,7 @@
     "browserify": "^16.1.0",
     "coffeeify": "^3.0.1",
     "coffeescript": "^1.12.7",
+    "mime": "^2.3.1",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0",
