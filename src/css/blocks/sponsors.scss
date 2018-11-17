@@ -1,0 +1,11 @@
+.sponsors {
+  padding: 3rem;
+
+  &__items {
+    @include grid;
+  }
+
+  &__item {
+    @include grid__item(1/4);
+  }
+}

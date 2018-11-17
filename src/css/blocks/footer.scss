@@ -1,0 +1,19 @@
+.footer {
+  padding: 3rem;
+
+  &__content {
+    @include grid;
+  }
+
+  &__archive {
+    @include grid__item(2/4);
+  }
+
+  &__credits {
+    @include grid__item(1/4);
+  }
+
+  &__links {
+    @include grid__item(1/4);
+  }
+}

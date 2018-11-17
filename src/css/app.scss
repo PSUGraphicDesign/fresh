@@ -4,10 +4,16 @@
 // Meta
 @import 'includes/variables';
 @import 'includes/elements';
+@import 'includes/mixins-screens';
+@import 'includes/mixins-grid';
 
 // Blocks
+@import 'blocks/about';
+@import 'blocks/details';
 @import 'blocks/document';
-@import 'blocks/header';
+@import 'blocks/footer';
 @import 'blocks/home';
+@import 'blocks/menu';
 @import 'blocks/root';
+@import 'blocks/sponsors';
 

@@ -1,0 +1,9 @@
+.menu {
+  padding: 1rem;
+  background-color: $color__header;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
