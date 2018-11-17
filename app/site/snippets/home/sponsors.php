@@ -1,10 +1,9 @@
 <div class="sponsors">
   <ul class="sponsors__items">
-    <li class="sponsors__item">
-      <a href="#">Sponsor</a>
-    </li>
-    <li class="sponsors__item">
-      <a href="#">Sponsor</a>
-    </li>
+    <? foreach ($page->sponsors()->toStructure() as $sponsor) { ?>
+      <li class="sponsors__item">
+        <a href="<?= $sponsor->link() ?>"><?= $sponsor->name() ?></a>
+      </li>
+    <? } ?>
   </ul>
 </div>

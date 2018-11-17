@@ -2,6 +2,8 @@ title: Site Options
 pages:
   template:
     - default
+    - home
+    - archive
 files: true
 fields:
   # Site Settings
@@ -30,30 +32,16 @@ fields:
     label: Google Analytics Tracking ID
     type: text
 
-  # Location
-  section_location:
-    label: Location
+  # Footer
+  section_footer:
+    label: Footer Content
     type: headline
-  location:
-    label: Primary Location
-    type: map
-
-  # Social
-  section_social:
-    label: Social Profiles
-    type: headline
-  social_profile_twitter:
-    label: Twitter URL
-    type: url
-    width: 1/3
-    icon: twitter
-  social_profile_facebook:
-    label: Facebook URL
-    type: url
-    width: 1/3
-    icon: facebook
-  social_profile_instagram:
-    label: Instagram URL
-    type: url
-    width: 1/3
-    icon: instagram
+  alumni_preview:
+    label: Alumni Archive Preview
+    type: textarea
+  about:
+    label: About Fresh
+    type: textarea
+  credits:
+    label: Credits
+    type: textarea

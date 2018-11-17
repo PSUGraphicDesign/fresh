@@ -13,16 +13,3 @@ fields:
     label: Preview Image
     type: image
     width: 1/2
-  date_created:
-    label: Created on
-    type:  date
-    width: 1/2
-    readonly: true
-    default:  now
-  date_updated:
-    label: Updated on
-    type:  date
-    width: 1/2
-    readonly: true
-    default:  now
-    override: true

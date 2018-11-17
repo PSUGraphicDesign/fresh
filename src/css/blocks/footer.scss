@@ -5,7 +5,7 @@
     @include grid;
   }
 
-  &__archive {
+  &__about {
     @include grid__item(2/4);
   }
 
@@ -13,7 +13,7 @@
     @include grid__item(1/4);
   }
 
-  &__links {
+  &__alumni {
     @include grid__item(1/4);
   }
 }

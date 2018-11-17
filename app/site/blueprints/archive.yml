@@ -1,0 +1,10 @@
+title: Archive
+pages: 
+  template:
+    - year
+files: false
+icon: address-book
+fields:
+  title:
+    label: Title
+    type: text

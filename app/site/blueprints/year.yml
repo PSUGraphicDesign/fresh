@@ -1,0 +1,10 @@
+title: Year
+pages: 
+  template:
+    - term
+files: false
+icon: calendar-plus-o
+fields:
+  title:
+    label: Title
+    type: text

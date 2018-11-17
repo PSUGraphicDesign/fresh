@@ -1,5 +1,5 @@
 <div class="about">
   <div class="about__content">
-    About
+    <?= $page->about()->kirbytext() ?>
   </div>
 </div>

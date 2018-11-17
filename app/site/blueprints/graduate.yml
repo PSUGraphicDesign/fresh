@@ -1,0 +1,36 @@
+title: Graduate
+pages: false
+files: true
+icon: user
+fields:
+  title:
+    label: Title
+    type: text
+
+  photo:
+    label: Profile Photo
+    type: image
+    width: 1/2
+  thumbnail:
+    label: Work Sample Thumbnail
+    type: image
+    width: 1/2
+  bio:
+    label: Bio
+    type: textarea
+  tags:
+    label: Tags
+    type: tags
+  work:
+    label: Work Samples
+    type: structure
+    fields:
+      image:
+        label: Image
+        type: image
+      description:
+        label: Description
+        type: textarea
+
+
+

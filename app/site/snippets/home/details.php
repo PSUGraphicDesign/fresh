@@ -1,13 +1,13 @@
 <div class="details">
   <ul class="details__items">
     <li class="details__item details__item--what">
-      What
+      <?= $page->what()->kirbytext() ?>
     </li>
     <li class="details__item details__item--when">
-      When
+      <?= $page->when()->kirbytext() ?>
     </li>
     <li class="details__item details__item--where">
-      Where
+      <?= $page->where()->kirbytext() ?>
     </li>
   </ul>
 </div>
