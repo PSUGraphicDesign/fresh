@@ -12,7 +12,7 @@
   </head>
   <body class="<?= Help::body_classes() ?>" data-action="<?= isset($page) ? $page->template() : "default" ?>">
     <header class="document__header">
-      Header
+      <? snippet('modules/menu') ?>
     </header>
 
     <main class="document__content">
