@@ -1,11 +1,27 @@
 .details {
-  padding: 3rem;
+  padding: 1rem;
+
+  @include screen--medium {
+    padding: 3rem;
+  }
 
   &__items {
     @include grid;
   }
 
   &__item {
-    @include grid__item(1/3);
+    @include grid__item;
+
+    margin-bottom: 1rem;
+
+    @include screen--medium {
+      @include grid__item(1/3);
+
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

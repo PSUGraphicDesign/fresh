@@ -4,10 +4,10 @@
       <a href="#">Attend</a>
     </li>
     <li class="menu__item menu__item--home">
-      <a href="#">Home</a>
+      <a href="<?= url('/') ?>">Home</a>
     </li>
     <li class="menu__item menu__item--grads">
-      <a href="#">Grads</a>
+      <a href="<?= url('/grads') ?>">Grads</a>
     </li>
   </ul>
 </section>

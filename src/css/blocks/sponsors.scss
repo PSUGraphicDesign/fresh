@@ -1,11 +1,22 @@
 .sponsors {
-  padding: 3rem;
+  padding: 1rem;
+  
+  @include screen--medium {
+    padding: 3rem;
+  }
 
   &__items {
     @include grid;
   }
 
   &__item {
-    @include grid__item(1/4);
+    @include grid__item;
+
+    margin-bottom: 1rem;
+    display: block;
+
+    @include screen--medium {
+      @include grid__item(1/4);
+    }
   }
 }

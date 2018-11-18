@@ -1,19 +1,50 @@
 .footer {
-  padding: 3rem;
+
+  padding: 1rem;
+
+  @include screen--medium {
+    padding: 3rem;
+  }
 
   &__content {
     @include grid;
   }
 
   &__about {
-    @include grid__item(2/4);
+    @include grid__item(1);
+
+    margin-bottom: 1rem;
+
+    @include screen--large {
+      @include grid__item(2/4);
+    }
   }
 
   &__credits {
-    @include grid__item(1/4);
+    @include grid__item(1);
+
+    margin-bottom: 1rem;
+    
+    @include screen--medium {
+      @include grid__item(1/2);
+    }
+
+    @include screen--large {
+      @include grid__item(1/4);
+
+      margin-bottom: 0;
+    }
   }
 
-  &__alumni {
-    @include grid__item(1/4);
+  &__archive{
+    @include grid__item(1);
+
+    @include screen--medium {
+      @include grid__item(1/2);
+    }
+    
+    @include screen--large {
+      @include grid__item(1/4);
+    }
   }
 }

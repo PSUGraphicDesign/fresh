@@ -6,12 +6,14 @@
 @import 'includes/elements';
 @import 'includes/mixins-screens';
 @import 'includes/mixins-grid';
+@import 'includes/responsive-image';
 
 // Blocks
 @import 'blocks/about';
 @import 'blocks/details';
 @import 'blocks/document';
 @import 'blocks/footer';
+@import 'blocks/grad';
 @import 'blocks/grads';
 @import 'blocks/home';
 @import 'blocks/menu';

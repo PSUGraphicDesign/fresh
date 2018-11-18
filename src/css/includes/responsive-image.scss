@@ -1,0 +1,18 @@
+.responsive-image {}
+
+.responsive-image__shim {
+  position: relative;
+  overflow: hidden;
+}
+
+.responsive-image__image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: 250ms linear opacity;
+}
+
+.responsive-image__image--loaded {
+  opacity: 1;
+}

@@ -1,8 +1,8 @@
 <? snippet('document/header') ?>
 
-  <? snippet('home/hero') ?>
-  <? snippet('home/details') ?>
-  <? snippet('home/about') ?>
-  <? snippet('home/sponsors') ?>
+  <? snippet('blocks/hero') ?>
+  <? snippet('blocks/details') ?>
+  <? snippet('blocks/about') ?>
+  <? snippet('blocks/sponsors') ?>
 
 <? snippet('document/footer') ?>

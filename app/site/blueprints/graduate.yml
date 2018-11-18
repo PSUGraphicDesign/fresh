@@ -21,6 +21,18 @@ fields:
   tags:
     label: Tags
     type: tags
+  links:
+    label: External Links
+    type: structure
+    fields:
+      label: 
+        label: Label
+        type: text
+      link:
+        label: URL
+        type: url
+    style: table
+    
   work:
     label: Work Samples
     type: structure
