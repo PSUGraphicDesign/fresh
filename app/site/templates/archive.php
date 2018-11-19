@@ -2,7 +2,7 @@
 
   <div class="archive">
     <div class="archive__intro">
-      <h1 class="archive__title">Grads</h1>
+      <h1 class="archive__title">Alumni Archive</h1>
     </div>
     <div class="archive__index">
       <? foreach ($years as $year) { ?>
@@ -13,9 +13,7 @@
               <div class="archive__term">
                 <h3 class="archive__term-title"><?= $term->title() ?></h3>
                 <div class="archive__grads">
-                  <? foreach ($term->grads() as $grad) { ?>
-                    <div class="archive__grad"><?= $grad->title() ?></div>
-                  <? } ?>
+                  <? snippet('blocks/grads__index', ['grads' => $term->grads()]) ?>
                 </div>
               </div>
             <? } ?>
