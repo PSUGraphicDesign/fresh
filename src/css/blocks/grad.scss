@@ -4,4 +4,71 @@
   @include screen--medium {
     padding: 3rem;
   }
+
+  &__content {
+    @include grid();
+    @include grid--kebab;
+    @include grid--column;
+  }
+
+  &__photo {
+    @include grid__item();
+
+    margin-bottom: 3rem;
+
+    @include screen--medium {
+      @include grid__item(1/3);
+    }
+  }
+
+  &__name {
+    @include grid__item();
+
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__bio {
+    @include grid__item();
+
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @include screen--medium {
+      @include grid__item(2/3);
+    }
+  }
+
+  &__buttons {
+    @include grid__item();
+
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__button {
+    display: inline-block;
+  }
+
+  &__button--link {
+    @include button;
+  }
+
+  &__work-samples {
+    @include grid__item();
+
+    @include screen--medium {
+      @include grid__item(2/3);
+    }
+  }
+
+  &__work-sample {}
+
+  &__work-sample--image {
+    margin-bottom: 2rem;
+  }
+
+  &__work-sample--description {
+    text-align: center;
+  }
 }

@@ -1,0 +1,25 @@
+@mixin button--reset {
+  font: inherit;
+  text-transform: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  white-space: nowrap;
+  line-height: inherit;
+  border-radius: 0;
+  text-decoration: none;
+  appearance: none;
+}
+
+@mixin button {
+ @include button--reset;
+
+ padding: 0.5rem 2rem;
+ margin: 0 0.5rem;
+ border: 1px solid;
+ display: block;
+}

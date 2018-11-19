@@ -5,6 +5,11 @@
     padding: 3rem;
   }
 
+  &__header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
   &__items {
     @include grid;
   }

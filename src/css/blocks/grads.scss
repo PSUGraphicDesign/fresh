@@ -1,11 +1,64 @@
 .grads {
-  &__intro {
+  padding: 1rem;
+
+  @include screen--medium {
     padding: 3rem;
   }
 
-  &__title {}
+  &__header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
 
   &__index {
-    padding: 3rem;
+    @include grid();
+  }
+
+  &__grad {
+    @include grid__item();
+
+    margin-bottom: 2rem;
+
+    @include screen--medium {
+      @include grid__item(1/3);
+    }
+  }
+
+  &__grad-link {
+    display: block;
+  }
+
+  &__grad-media {
+    position: relative;
+  }
+
+  &__grad-image {
+    &--primary {
+      .responsive-image {
+        &__shim {
+          padding-bottom: 100%;
+        }
+      }
+    }
+
+    &--alternate {
+      opacity: 0;
+
+      .grads__grad-link:hover & {
+        opacity: 1;
+      }
+
+      .responsive-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__grad-name {
+    margin-top: 1rem;
   }
 }

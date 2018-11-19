@@ -7,14 +7,19 @@ fields:
     label: Title
     type: text
 
-  photo:
+  profile_photo:
     label: Profile Photo
     type: image
-    width: 1/2
-  thumbnail:
-    label: Work Sample Thumbnail
+  featured_photo:
+    label: Featured Thumbnail Image
     type: image
     width: 1/2
+    help: This image will show on load.
+  alt_photo:
+    label: Alternate Thumbnail Image
+    type: image
+    width: 1/2
+    help: This image is optional and will show on hover.
   bio:
     label: Bio
     type: textarea
@@ -32,8 +37,7 @@ fields:
         label: URL
         type: url
     style: table
-    
-  work:
+  work_samples:
     label: Work Samples
     type: structure
     fields:

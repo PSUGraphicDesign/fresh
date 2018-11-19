@@ -4,15 +4,19 @@
     <? snippet('util/document') ?>
     <? snippet('util/meta') ?>
 
-    <?= css([
-      Help::versioned_asset_url('css', 'app.css')
-    ]) ?>
+    <? $stylesheets = [Help::versioned_asset_url('css', 'app.css')] ?>
+
+    <? if (isset($page)) { ?>
+      <? foreach ($page->files()->filterBy('extension', 'css') as $stylesheet) $stylesheets[] = $stylesheet->url() ?>
+    <? } ?>
+
+    <?= css($stylesheets) ?>
 
     <? c::get('env') == 'production' ? snippet('util/analytics') : null ?>
   </head>
   <body class="<?= Help::body_classes() ?>" data-action="<?= isset($page) ? $page->template() : "default" ?>">
     <header class="document__header">
-      <? snippet('modules/menu') ?>
+      <? snippet('blocks/menu') ?>
     </header>
 
     <main class="document__content">

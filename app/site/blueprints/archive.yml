@@ -2,6 +2,7 @@ title: Archive
 pages: 
   template:
     - year
+  sort: title desc
 files: false
 icon: address-book
 fields:

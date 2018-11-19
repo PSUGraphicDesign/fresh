@@ -2,7 +2,9 @@ title: Term
 pages: 
   template:
     - graduate
-files: false
+  sort: title asc
+  num: zero
+files: true
 icon: calendar-plus-o
 fields:
   title:
@@ -27,21 +29,9 @@ fields:
   location:
     label: Location
     type: map
-  ticket-link:
+  ticket_link:
     label: Ticketing Link
     type: url
-
-  section_index:
-    label: Index Options
-    type: headline
-  thumbnail_order:
-    label: Thumbnail Order
-    type: radio
-    options:
-      profile_photo: Profile Photo
-      works_sample: Work Sample Thumbnail
-    help: >
-      Which image will show on page load? The other image will show on hover.
 
   # Hero
   section_hero:
@@ -78,10 +68,21 @@ fields:
     help: >
       A place to write a little about what Fresh is and a statement about this term's theme.
 
+  # Grads Index
+  section_grads:
+    label: Grads Section
+    type: headline
+  grads_header:
+    label: Section Header
+    type: text
+
   # Sponsors
   section_sponsors:
     label: Sponsors Section
     type: headline
+  sponsors_header:
+    label: Section Header
+    type: text
   sponsors:
     label: Sponsor
     type: structure

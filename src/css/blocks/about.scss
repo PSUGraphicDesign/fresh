@@ -4,4 +4,20 @@
   @include screen--medium {
     padding: 3rem;
   }
+
+  &__content {
+    @include grid();
+    @include grid--kebab;
+    @include grid--column;
+  }
+
+  &__message {
+    @include grid__item();
+
+    //text-align: center;
+
+    @include screen--medium {
+      @include grid__item(2/3);
+    }
+  }
 }

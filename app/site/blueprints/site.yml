@@ -11,6 +11,23 @@ fields:
     label: Site Name
     type: text
 
+  # Current Term
+
+  section_current:
+    label: Current Settings
+    type: headline
+
+  current_term:
+    label: Current Term
+    type: select
+    options: query    
+    query:
+      page: archive
+      fetch: grandchildren
+      value: '{{uri}}'
+      text: '{{parentTitle}} — {{title}}'
+    required: true
+
   section_meta:
     label: Metadata + Search
     type: headline

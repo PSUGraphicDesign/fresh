@@ -23,3 +23,11 @@ c::set('thumbs.presets', [
     'quality' => 50
   ]
 ]);
+
+# Custom Routes
+c::set('routes', [
+  [
+    'pattern' => '/',
+    'action'  => function () { return page(site()->current_term()); }
+  ]
+]);
