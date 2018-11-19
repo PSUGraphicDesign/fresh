@@ -13,7 +13,7 @@
               <div class="archive__term">
                 <h3 class="archive__term-title"><?= $term->title() ?></h3>
                 <div class="archive__grads">
-                  <? snippet('blocks/grads__index', ['grads' => $term->grads()]) ?>
+                  <? snippet('blocks/grads-index', ['grads' => $term->grads()]) ?>
                 </div>
               </div>
             <? } ?>

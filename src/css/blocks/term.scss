@@ -1,0 +1,109 @@
+.term {
+  &__hero {
+  }
+
+  // Details (What, When, Where) Section
+  &__details {
+    padding: 1rem;
+
+    @include screen--medium {
+      padding: 3rem;
+    }
+  }
+
+  &__details-items {
+    @include grid;
+  }
+
+  &__details-item {
+    @include grid__item;
+
+    margin-bottom: 1rem;
+
+    @include screen--medium {
+      @include grid__item(1/3);
+
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  // About (Introduction) Section
+
+  &__about {
+    padding: 1rem;
+  
+    @include screen--medium {
+      padding: 3rem;
+    }
+  }
+
+  &__about-content {
+    @include grid();
+    @include grid--kebab;
+    @include grid--column;
+  }
+
+  &__about-message {
+    @include grid__item();
+
+    @include screen--medium {
+      @include grid__item(2/3);
+    }
+  }
+
+  // Grads Section
+
+  &__grads {
+    padding: 1rem;
+
+    @include screen--medium {
+      padding: 3rem;
+    }
+  }
+
+  &__grads-content {}
+
+  &__grads-header {
+    margin-bottom: 3rem;
+  }
+
+  // Sponsors Section
+
+  &__sponsors {
+    padding: 1rem;
+  
+    @include screen--medium {
+      padding: 3rem;
+    }
+  }
+
+  &__sponsors-header {
+    margin-bottom: 3rem;
+  }
+
+  &__sponsors-list {
+    @include grid;
+
+    align-items: center;
+  }
+
+  &__sponsor {
+    @include grid__item;
+
+    margin-bottom: 1rem;
+    display: block;
+
+    @include screen--medium {
+      @include grid__item(1/4);
+    }
+  }
+
+  &__sponsor-link {
+    display: block;
+  }
+}

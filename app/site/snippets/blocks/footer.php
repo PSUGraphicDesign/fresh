@@ -14,6 +14,7 @@
       <div class="text-content">
         <?= $site->alumni_preview()->kirbytext() ?>
       </div>
+      <a class="footer__archive-link" href="/archive">Alumni Archive</a>
     </div>
   </div>
 </div>

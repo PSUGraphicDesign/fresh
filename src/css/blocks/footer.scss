@@ -1,5 +1,4 @@
 .footer {
-
   padding: 1rem;
 
   @include screen--medium {
@@ -46,5 +45,12 @@
     @include screen--large {
       @include grid__item(1/4);
     }
+  }
+
+  &__archive-link {
+    @include button;
+    
+    display: block;
+    margin-top: 1rem;
   }
 }

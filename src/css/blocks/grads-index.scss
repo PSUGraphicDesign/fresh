@@ -1,21 +1,11 @@
-.grads {
-  padding: 1rem;
+.grads-index {
 
-  @include screen--medium {
-    padding: 3rem;
-  }
-
-  &__header {
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-
-  &__index {
-    @include grid();
+  &__grads {
+    @include grid;
   }
 
   &__grad {
-    @include grid__item();
+    @include grid__item;
 
     margin-bottom: 2rem;
 

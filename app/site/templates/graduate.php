@@ -1,32 +1,33 @@
 <? snippet('document/header') ?>
 
-  <div class="grad">
-    <div class="grad__content">
-      <div class="grad__photo">
+  <div class="graduate">
+
+    <div class="graduate__content">
+      <div class="graduate__photo">
         <? snippet('blocks/responsive-image', ['image' => $page->profile_photo()->toFile()]) ?>
       </div>
-      <h1 class="grad__name"><?= $page->title() ?></h1>
-      <div class="grad__bio">
+      <h1 class="graduate__name"><?= $page->title() ?></h1>
+      <div class="graduate__bio">
         <div class="text-content">
           <?= $page->bio() ?>
         </div>
       </div>
-      <ul class="grad__buttons">
+      <ul class="graduate__buttons">
         <? foreach ($page->links()->toStructure() as $link) { ?>
-          <li class="grad__button">
-            <a class="grad__button--link" href="<?= $link->link() ?>" target="_blank"><?= $link->label() ?></a>
+          <li class="graduate__button">
+            <a class="graduate__button--link" href="<?= $link->link() ?>" target="_blank"><?= $link->label() ?></a>
           </li>
         <? } ?>
       </ul>
-      <ul class="grad__work-samples">
+      <ul class="graduate__work-samples">
         <? foreach ($page->work_samples()->toStructure() as $sample) { ?>
-          <li class="grad__work-sample">
-            <div class="grad__work-sample--image">
+          <li class="graduate__work-sample">
+            <div class="graduate__work-sample--image">
               <? snippet('blocks/responsive-image', [
                 'image' => $page->image($sample->image())
               ]) ?>
             </div>
-            <div class="grad__work-sample--description">
+            <div class="graduate__work-sample--description">
               <div class="text-content">
                 <?= $sample->description() ?>
               </div>
@@ -35,13 +36,14 @@
         <? } ?>
       </ul>
     </div>
-  </div>
-
-  <div class="grads">
-    <div class="grads__content">
-      <h2 class="grads__header">All Grads</h2>
-      <? snippet('blocks/grads__index', ['grads' => $page->parent()->grads()]) ?>
+    
+    <div class="graduate__all-grads" id="grads">
+      <div class="graduate__all-grads-content">
+        <h2 class="graduate__all-grads-header">All Grads</h2>
+        <? snippet('blocks/grads-index', ['grads' => $page->parent()->grads()]) ?>
+      </div>
     </div>
+
   </div>
 
 <? snippet('document/footer') ?>
