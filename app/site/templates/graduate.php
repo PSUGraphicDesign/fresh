@@ -36,7 +36,7 @@
         <? } ?>
       </ul>
     </div>
-    
+
     <div class="graduate__all-grads" id="grads">
       <div class="graduate__all-grads-content">
         <h2 class="graduate__all-grads-header">All Grads</h2>
