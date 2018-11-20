@@ -58,12 +58,12 @@
     margin-top: 6rem;
 
     @include screen--medium {
-      @include grid__item(2/3);
+      @include grid__item(5/6);
     }
   }
 
   &__work-sample {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
   }
 
   &__work-sample--image {
