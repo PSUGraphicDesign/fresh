@@ -18,13 +18,17 @@ fields:
     label: Date
     type: date
     width: 1/3
-  start_time:
+  time_start:
     label: Start Time
     type: time
+    format: 12
+    interval: 30
     width: 1/3
-  end_time:
+  time_end:
     label: End Time
     type: time
+    format: 12
+    interval: 30
     width: 1/3
   location:
     label: Location
