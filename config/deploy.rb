@@ -2,7 +2,7 @@
 lock '3.6.0'
 
 set :application, 'my_app_name'
-set :repo_url, 'git@github.com:AugustMiller/plainkit.git'
+set :repo_url, 'git@github.com:PSUGraphicDesign/fresh.git'
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
