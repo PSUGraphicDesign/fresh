@@ -62,7 +62,9 @@
     }
   }
 
-  &__work-sample {}
+  &__work-sample {
+    margin-bottom: 3rem;
+  }
 
   &__work-sample--image {
     margin-bottom: 2rem;
