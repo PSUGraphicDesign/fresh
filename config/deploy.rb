@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.0'
 
-set :application, 'my_app_name'
+set :application, 'fresh'
 set :repo_url, 'git@github.com:PSUGraphicDesign/fresh.git'
 
 # Default branch is :master

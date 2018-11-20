@@ -10,7 +10,7 @@
 set :app_domain, 'fresh.staging.oof.studio'
 server fetch(:app_domain), user: 'deploy', roles: ['web']
 
-# set :deploy_to, '/path/to/your/deploy/directory'
+set :deploy_to, '/var/www/staging/fresh'
 
 # role-based syntax
 # ==================
