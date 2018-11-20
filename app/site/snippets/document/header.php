@@ -7,7 +7,13 @@
     <? $stylesheets = [Help::versioned_asset_url('css', 'app.css')] ?>
 
     <? if (isset($page)) { ?>
-      <? foreach ($page->files()->filterBy('extension', 'css') as $stylesheet) $stylesheets[] = $stylesheet->url() ?>
+      <? if ($page->intendedTemplate() == 'term') { ?>
+        <? $stylesheetSource = $page ?>
+      <? } else if ($page->intendedTemplate() == 'graduate') { ?>
+        <? $stylesheetSource = $page->parent() ?>
+      <? } ?>
+
+      <? foreach ($stylesheetSource->files()->filterBy('extension', 'css') as $stylesheet) $stylesheets[] = $stylesheet->url() ?>
     <? } ?>
 
     <?= css($stylesheets) ?>
