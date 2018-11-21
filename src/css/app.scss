@@ -5,9 +5,9 @@
 @import 'includes/variables';
 @import 'includes/elements';
 @import 'includes/mixins-grid';
+@import 'includes/mixins-layout';
 @import 'includes/mixins-screens';
 @import 'includes/mixins-ui';
-@import 'includes/responsive-image';
 
 // Blocks
 @import 'blocks/archive';
@@ -17,6 +17,7 @@
 @import 'blocks/grads-index';
 @import 'blocks/home';
 @import 'blocks/menu';
+@import 'blocks/responsive-image';
 @import 'blocks/root';
 @import 'blocks/term';
 @import 'blocks/text-content';

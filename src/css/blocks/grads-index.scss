@@ -16,10 +16,12 @@
 
   &__grad-link {
     display: block;
+    position: relative;
   }
 
   &__grad-media {
     position: relative;
+    margin-bottom: 1rem;
   }
 
   &__grad-image {
@@ -32,23 +34,20 @@
     }
 
     &--alternate {
-      opacity: 0;
+      @include fill-parent;
 
-      .grads__grad-link:hover & {
+      opacity: 0;
+      transition: 0.15s linear opacity;
+
+      .grads-index__grad-link:hover & {
         opacity: 1;
       }
 
       .responsive-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        @include fill-parent;
       }
     }
   }
 
-  &__grad-name {
-    margin-top: 1rem;
-  }
+  &__grad-name {}
 }
