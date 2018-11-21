@@ -32,15 +32,27 @@
     @include grid__item();
 
     text-align: center;
-    margin-bottom: $layout__spacing--standard;
 
     @include screen--medium {
       @include grid__item(2/3);
     }
   }
 
+  &__interests {
+    margin-top: $layout__spacing--slim;
+  }
+
+  &__interest {
+    background-color: black;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
   &__buttons {
     @include grid__item();
+
+    margin-top: $layout__spacing--standard;
     text-align: center;
   }
 
@@ -50,6 +62,8 @@
 
   &__button--link {
     @include button;
+
+    display: inline-block;
 
     .graduate--is-archived & {
       border: 1px solid black;

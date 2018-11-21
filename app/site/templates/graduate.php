@@ -18,8 +18,13 @@
     <h1 class="graduate__name"><?= $page->title() ?></h1>
     <div class="graduate__bio">
       <div class="text-content">
-        <?= $page->bio() ?>
+        <?= $page->bio()->kirbytext() ?>
       </div>
+    </div>
+    <div class="graduate__interests">
+      <? foreach ($page->tags()->split() as $tag) { ?>
+        <span class="graduate__interest"><?= $tag ?></span>
+      <? } ?>
     </div>
     <ul class="graduate__buttons">
       <? foreach ($page->links()->toStructure() as $link) { ?>
@@ -38,7 +43,7 @@
           </div>
           <div class="graduate__work-sample--description">
             <div class="text-content">
-              <?= $sample->description() ?>
+              <?= $sample->description()->kirbytext() ?>
             </div>
           </div>
         </li>
