@@ -1,6 +1,11 @@
 .menu {
   padding: $layout__spacing--slim;
 
+  &--archive {
+    background-color: black;
+    color: white;
+  }
+
   &__items {
     display: flex;
     justify-content: space-between;
@@ -12,4 +17,6 @@
       width: 150px;
     }
   }
+
+  &__item-link {}
 }
