@@ -26,6 +26,7 @@
         <div class="text-content">
           <?= $term->where()->kirbytext() ?>
         </div>
+        <a class="term__details--directions" href="<?= $term->directions() ?>" target="_blank">Get Directions</a>
       </li>
     </ul>
   </div>
@@ -38,6 +39,7 @@
           <?= $term->about()->kirbytext() ?>
         </div>
       </div>
+      <a class="term__attend-button" href="<?= $term->ticket_link() ?>" target="_blank">Attend</a>
     </div>
   </div>
 
