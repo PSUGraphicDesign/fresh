@@ -1,6 +1,6 @@
     </main>
 
-    <footer class="document__footer">
+    <footer class="document__footer js-document__footer">
       <? snippet('blocks/footer') ?>
     </footer>
 

@@ -1,6 +1,6 @@
 <? class Help {
-  public static function body_classes ($extra = []) {
-    if (isset($page)) {
+  public static function body_classes ($page, $extra = []) {
+    if ($page) {
       $pageClasses = [
         "document--uid-{$page->uid()}",
         "document--template-{$page->template()}"
@@ -10,7 +10,8 @@
     }
 
     $defaultClasses = [
-      'document'
+      'document',
+      'js-document'
     ];
 
     $classes = array_merge($defaultClasses, $pageClasses, $extra);

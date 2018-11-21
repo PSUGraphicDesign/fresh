@@ -1,3 +1,19 @@
 .document {
   line-height: $type__leading--default;
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    .document--template-archive & {
+      display: none;
+    }
+  }
+
+  &__content {}
+
+  &__footer {}
 }
