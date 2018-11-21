@@ -3,9 +3,15 @@ pages:
   template:
     - year
   sort: title desc
-files: false
+files: true
 icon: address-book
 fields:
   title:
     label: Title
     type: text
+  description:
+    label: Description
+    type: textarea
+  psugd_logo:
+    label: Logo
+    type: image

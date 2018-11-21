@@ -4,7 +4,15 @@
 
   <div class="archive">
     <div class="archive__intro">
-      <h1 class="archive__title">Alumni Archive</h1>
+      <div class="archive__logo">
+        <? snippet('blocks/responsive-image', ['image' => $page->psugd_logo()->toFile()]) ?>
+      </div>
+      <h1 class="archive__title"><?= $page->title() ?></h1>
+      <div class="archive__description">
+        <div class="text-content">
+          <?= $page->description()->kirbytext() ?>
+        </div>
+      </div>
     </div>
     <div class="archive__index">
       <? foreach ($years as $year) { ?>

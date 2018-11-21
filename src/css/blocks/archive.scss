@@ -7,9 +7,19 @@
     }
   }
 
+  &__logo {
+    width: 100px;
+    margin-bottom: $layout__spacing--standard;
+  }
+
   &__title {
-    font-size: 2rem;
-    font-weight: bold;
+    margin-bottom: $layout__spacing--slim;
+  }
+
+  &__description {
+    @include screen__large {
+      width: 60%;
+    }
   }
 
   &__index {
