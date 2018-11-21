@@ -1,9 +1,10 @@
 .menu {
-  padding: 2rem;
+  padding: $layout__spacing--slim;
 
   &__items {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__item {

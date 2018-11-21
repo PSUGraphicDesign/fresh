@@ -4,10 +4,10 @@
 
   // Details (What, When, Where) Section
   &__details {
-    padding: 1rem;
+    padding: $layout__spacing--slim;
 
     @include screen--medium {
-      padding: 5rem;
+      padding: $layout__spacing--wide;
     }
   }
 
@@ -18,7 +18,7 @@
   &__details-item {
     @include grid__item;
 
-    margin-bottom: 1rem;
+    margin-bottom: $layout__spacing--standard;
 
     @include screen--medium {
       @include grid__item(1/3);
@@ -35,10 +35,10 @@
   // About (Introduction) Section
 
   &__about {
-    padding: 1rem;
+    padding: $layout__spacing--slim;
   
     @include screen--medium {
-      padding: 5rem;
+      padding: $layout__spacing--wide;
     }
   }
 
@@ -59,31 +59,31 @@
   // Grads Section
 
   &__grads {
-    padding: 1rem;
+    padding: $layout__spacing--slim;
 
     @include screen--medium {
-      padding: 5rem;
+      padding: $layout__spacing--wide;
     }
   }
 
   &__grads-content {}
 
   &__grads-header {
-    margin-bottom: 3rem;
+    margin-bottom: $layout__spacing--standard;
   }
 
   // Sponsors Section
 
   &__sponsors {
-    padding: 1rem;
+    padding: $layout__spacing--slim;
   
     @include screen--medium {
-      padding: 5rem;
+      padding: $layout__spacing--wide;
     }
   }
 
   &__sponsors-header {
-    margin-bottom: 3rem;
+    margin-bottom: $layout__spacing--standard;
   }
 
   &__sponsors-list {
@@ -95,7 +95,7 @@
   &__sponsor {
     @include grid__item;
 
-    margin-bottom: 1rem;
+    margin-bottom: $layout__spacing--slim;
     display: block;
 
     @include screen--medium {

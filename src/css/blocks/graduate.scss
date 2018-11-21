@@ -1,8 +1,8 @@
 .graduate {
-  padding: 1rem;
+  padding: $layout__spacing--slim;
   
   @include screen--medium {
-    padding: 5rem;
+    padding: $layout__spacing--wide;
   }
 
   &__content {
@@ -14,7 +14,7 @@
   &__photo {
     @include grid__item();
 
-    margin-bottom: 3rem;
+    margin-bottom: $layout__spacing--standard;
 
     @include screen--medium {
       @include grid__item(1/3);
@@ -24,7 +24,7 @@
   &__name {
     @include grid__item();
 
-    margin-bottom: 1rem;
+    margin-bottom: $layout__spacing--slim;
     text-align: center;
   }
 
@@ -32,7 +32,7 @@
     @include grid__item();
 
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: $layout__spacing--standard;
 
     @include screen--medium {
       @include grid__item(2/3);
@@ -55,7 +55,7 @@
   &__work-samples {
     @include grid__item();
 
-    margin-top: 6rem;
+    margin-top: $layout__spacing--wide;
 
     @include screen--medium {
       @include grid__item(5/6);
@@ -63,11 +63,11 @@
   }
 
   &__work-sample {
-    margin-bottom: 6rem;
+    margin-bottom: $layout__spacing--wide;
   }
 
   &__work-sample--image {
-    margin-bottom: 2rem;
+    margin-bottom: $layout__spacing--standard;
   }
 
   &__work-sample--description {
@@ -77,12 +77,12 @@
   // All Grads Index
 
   &__all-grads {
-    margin-top: 6rem;
+    margin-top: $layout__spacing--wide;
   }
 
   &__all-grads-content {}
 
   &__all-grads-header {
-    margin-bottom: 3rem;
+    margin-bottom: $layout__spacing--standard;
   }
 }

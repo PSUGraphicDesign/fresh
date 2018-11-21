@@ -1,9 +1,9 @@
 .archive {
   &__intro {
-    padding: 1rem;
+    padding: $layout__spacing--slim;
 
     @include screen--medium {
-      padding: 5rem;
+      padding: $layout__spacing--wide;
     }
   }
 
@@ -13,36 +13,36 @@
   }
 
   &__index {
-    padding: 1rem;
+    padding: $layout__spacing--slim;
 
     @include screen--medium {
-      padding: 5rem;
+      padding: $layout__spacing--wide;
     }
   }
 
   &__year {
-    margin-bottom: 3rem;
+    margin-bottom: $layout__spacing--standard;
     border-top: 1px solid $color__black;
   }
 
   &__year-title {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-top: $layout__spacing--slim;
+    margin-bottom: $layout__spacing--standard;
     font-weight: bold;
     font-size: 1.25rem;
   }
 
   &__terms {
-    margin-bottom: 3rem;
+    margin-bottom: $layout__spacing--standard;
   }
 
   &__term-title {
-    margin-bottom: 2rem;
+    margin-bottom: $layout__spacing--standard;
     font-size: 1.25rem;
   }
 
   &__grads {
-    margin-bottom: 3rem;
+    margin-bottom: $layout__spacing--standard;
   }
 
   // Index Styles
