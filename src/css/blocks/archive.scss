@@ -43,6 +43,12 @@
 
   &__grads {
     margin-bottom: $layout__spacing--standard;
+
+    .grads-index__grad {
+      @include screen--medium {
+        @include grid__item(1/4);
+      }
+    }
   }
 
   // Index Styles
