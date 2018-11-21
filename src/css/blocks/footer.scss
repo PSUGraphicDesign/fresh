@@ -10,40 +10,20 @@
   }
 
   &__about {
-    @include grid__item(1);
+    @include grid__item;
 
     margin-bottom: 1rem;
 
     @include screen--large {
-      @include grid__item(2/4);
-    }
-  }
-
-  &__credits {
-    @include grid__item(1);
-
-    margin-bottom: 1rem;
-    
-    @include screen--medium {
-      @include grid__item(1/2);
-    }
-
-    @include screen--large {
-      @include grid__item(1/4);
-
-      margin-bottom: 0;
+      @include grid__item(3/5);
     }
   }
 
   &__archive{
-    @include grid__item(1);
-
-    @include screen--medium {
-      @include grid__item(1/2);
-    }
+    @include grid__item;
     
     @include screen--large {
-      @include grid__item(1/4);
+      @include grid__item(2/5);
     }
   }
 

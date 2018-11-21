@@ -53,12 +53,11 @@ fields:
   section_footer:
     label: Footer Content
     type: headline
-  alumni_preview:
-    label: Alumni Archive Preview
-    type: textarea
   about:
     label: About Fresh
     type: textarea
-  credits:
-    label: Credits
+    help: >
+      More general description of what Fresh is. Not specific to any term.
+  alumni_preview:
+    label: Alumni Archive Preview
     type: textarea

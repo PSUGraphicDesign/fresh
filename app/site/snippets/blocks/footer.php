@@ -5,11 +5,6 @@
         <?= $site->about()->kirbytext() ?>
       </div>
     </div>
-    <div class="footer__credits">
-      <div class="text-content">
-        <?= $site->credits()->kirbytext() ?>
-      </div>
-    </div>
     <div class="footer__archive">
       <div class="text-content">
         <?= $site->alumni_preview()->kirbytext() ?>
