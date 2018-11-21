@@ -33,9 +33,20 @@ fields:
   location:
     label: Location
     type: map
+
+  # Main Nav
+
+  section_nav:
+    label: Header Menu
+    type: headline
   ticket_link:
     label: Ticketing Link
     type: url
+  logo:
+    label: Logo
+    type: image
+    help: >
+      This will replace the "home" link in the menu.
 
   # Hero
   section_hero:

@@ -1,4 +1,6 @@
-<? snippet('document/header') ?>
+<? snippet('document/header', [
+  'useMenu' => 'current-term'
+]) ?>
 
 <div class="term">
 

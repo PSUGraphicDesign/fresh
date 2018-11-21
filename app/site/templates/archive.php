@@ -1,4 +1,6 @@
-<? snippet('document/header') ?>
+<? snippet('document/header', [
+  'useMenu' => 'archive'
+]) ?>
 
   <div class="archive">
     <div class="archive__intro">

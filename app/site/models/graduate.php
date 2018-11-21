@@ -6,4 +6,8 @@
   public function isInCurrentTerm () {
     return site()->current_term()->toPage()->is($this->term());
   }
+
+  public function termLogo () {
+    return $this->term()->logo()->toFile();
+  }
 }

@@ -23,7 +23,9 @@
 
   <body class="<?= Help::body_classes($page ?? null, $bodyClasses ?? []) ?>" data-action="<?= isset($page) ? $page->template() : "default" ?>">
     <header class="document__header js-document__header">
-      <? snippet('blocks/menu') ?>
+      <? if (isset($useMenu)) { ?>
+        <? snippet("blocks/menu--{$useMenu}") ?>
+      <? } ?>
     </header>
 
     <main class="document__content js-document__content">

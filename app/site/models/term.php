@@ -10,4 +10,8 @@
   public function isCurrentTerm () {
     return $site->current_term() == $this->uri();
   }
+
+  public function termLogo () {
+    return $this->logo()->toFile();
+  }
 }

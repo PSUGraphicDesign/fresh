@@ -1,7 +1,8 @@
 <? snippet('document/header', [
   'bodyClasses' => [
     $page->isInCurrentTerm() ? 'document--is-current-term' : 'document--is-archived-term'
-  ]
+  ],
+  'useMenu' => $page->isInCurrentTerm() ? 'current-term' : 'archive'
 ]) ?>
 
   <div class="graduate">

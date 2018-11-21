@@ -5,4 +5,10 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__item {
+    &--home {
+      width: 150px;
+    }
+  }
 }
