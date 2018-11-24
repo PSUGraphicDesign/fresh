@@ -31,7 +31,6 @@
     </ul>
   </div>
 
-
   <div class="term__about">
     <div class="term__about-content">
       <div class="term__about-message">

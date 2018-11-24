@@ -1,8 +1,14 @@
 .footer {
-  padding: $layout__spacing--slim;
+  padding: $layout__spacing--standard $layout__spacing--slim;
 
   @include screen--medium {
     padding: $layout__spacing--wide;
+  }
+
+  .document--template-archive &,
+  .document--is-archived-term & {
+    background-color: black;
+    color: white;
   }
 
   &__content {
@@ -12,7 +18,7 @@
   &__about {
     @include grid__item;
 
-    margin-bottom: $layout__spacing--slim;
+    margin-bottom: $layout__spacing--standard;
 
     @include screen--large {
       @include grid__item(3/5);
@@ -30,7 +36,18 @@
   &__archive-link {
     @include button;
     
-    display: block;
+    display: inline-block;
     margin-top: 1rem;
+
+    .document--template-archive &,
+    .document--is-archived-term & {
+      padding: 0.5rem 1rem;
+      border: 1px solid white;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
   }
 }
