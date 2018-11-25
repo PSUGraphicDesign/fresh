@@ -26,7 +26,7 @@
         <div class="text-content">
           <?= $term->where()->kirbytext() ?>
         </div>
-        <a class="term__details--directions" href="<?= $term->directions() ?>" target="_blank">Get Directions</a>
+        <a class="term__details-item-action" href="<?= $term->directions() ?>" target="_blank">Get Directions</a>
       </li>
     </ul>
   </div>

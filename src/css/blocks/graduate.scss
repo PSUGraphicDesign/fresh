@@ -64,10 +64,6 @@
   }
 
   &__button {
-    display: inline-block;
-  }
-
-  &__button--link {
     @include button;
 
     display: inline-block;

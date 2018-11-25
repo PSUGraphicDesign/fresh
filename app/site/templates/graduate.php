@@ -26,13 +26,11 @@
         <?= $page->bio()->kirbytext() ?>
       </div>
     </div>
-    <ul class="graduate__buttons">
+    <div class="graduate__buttons">
       <? foreach ($page->links()->toStructure() as $link) { ?>
-        <li class="graduate__button">
-          <a class="graduate__button--link" href="<?= $link->link() ?>" target="_blank"><?= $link->label() ?></a>
-        </li>
+        <a class="graduate__button" href="<?= $link->link() ?>" target="_blank"><?= $link->label() ?></a>
       <? } ?>
-    </ul>
+    </div>
     <ul class="graduate__work-samples">
       <? foreach ($page->work_samples()->toStructure() as $sample) { ?>
         <li class="graduate__work-sample">
