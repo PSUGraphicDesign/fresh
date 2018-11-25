@@ -6,13 +6,13 @@
           <div class="grads-index__grad-media">
             <? if ($featuredImage = $grad->featured_photo()->toFile()) { ?>
               <div class="grads-index__grad-image grads-index__grad-image--primary">
-                <? snippet('blocks/responsive-image', ['image' => $featuredImage, 'ratio' => false]) ?>
+                <? snippet('blocks/responsive-image', ['image' => $featuredImage, 'ratio' => false, 'isLazy' => true]) ?>
               </div>
             <? } ?>
 
             <? if ($altImage = $grad->alt_photo()->toFile()) { ?>
               <div class="grads-index__grad-image grads-index__grad-image--alternate">
-                <? snippet('blocks/responsive-image', ['image' => $altImage, 'ratio' => false]) ?>
+                <? snippet('blocks/responsive-image', ['image' => $altImage, 'ratio' => false, 'isLazy' => true]) ?>
               </div>
             <? } ?>
           </div>

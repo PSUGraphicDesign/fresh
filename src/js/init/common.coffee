@@ -13,8 +13,30 @@ module.exports = (app) ->
 
   markImageAsLoaded = ($img) -> $img.classList.add('responsive-image__image--is-loaded')
 
-  each $images, ($image) ->
+  each $images, ($image, index) ->
     fitter = new ImageFit $image
+
+    if $image.dataset.isLazy
+      $figure = $image.offsetParent
+
+      lazyListener = (e) ->
+        # We may not need to check anything!
+        return if $image.dataset.hasLazyLoaded
+
+        # Attempt to stagger calculations:
+        window.setTimeout ->
+          figurePosition = $figure.getBoundingClientRect()
+          figureTop = figurePosition.top
+          figureBottom = figurePosition.bottom
+
+          if figureTop > -window.innerHeight and figureBottom < (window.innerHeight * 2)
+            $image.dataset.hasLazyLoaded = true
+            $image.src = $image.dataset.src
+        , (Math.random() * 250)
+
+      window.addEventListener 'scroll', throttle lazyListener, 250
+
+      window.dispatchEvent new Event('scroll')
 
     if $image.complete
       markImageAsLoaded($image)

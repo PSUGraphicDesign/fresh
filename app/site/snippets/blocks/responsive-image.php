@@ -1,8 +1,22 @@
 <div class="responsive-image js-responsive-image">
-  <?= html::img($image->thumb(isset($options) ? $options : 'safe')->url(), array_merge([
+  <? $imgAttrs = [
     'title' => $image->title()->html(),
     'class' => 'responsive-image__image js-responsive-image__image'
-  ], isset($useSrcset) && $useSrcset ? Help::srcset_attrs_for($image, isset($options) ? $options : []) : [])) ?>
+  ] ?>
+
+  <? if (isset($useSrcset) && $useSrcset) { ?>
+    <? $imgAttrs = array_merge($imgAttrs, Help::srcset_attrs_for($image, isset($options) ? $options : [])) ?>
+  <? } ?>
+
+  <? $imgUrl = $image->thumb(isset($options) ? $options : 'safe')->url() ?>
+
+  <? if (isset($isLazy) && $isLazy) { ?>
+    <? $imgAttrs = array_merge($imgAttrs, ['data-src' => $imgUrl, 'data-is-lazy' => 1]) ?>
+  <? } else { ?>
+    <? $imgAttrs = array_merge($imgAttrs, ['src' => $imgUrl]) ?>
+  <? } ?>
+
+  <?= html::tag('img', $imgAttrs) ?>
 
   <? if (isset($ratio) && $ratio) { ?>
     <? # A custom ratio was passed: ?>
