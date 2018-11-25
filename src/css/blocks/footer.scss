@@ -22,6 +22,8 @@
 
     @include screen--large {
       @include grid__item(6/10);
+
+      margin-bottom: 0;
     }
   }
 
