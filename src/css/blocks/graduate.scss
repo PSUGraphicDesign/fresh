@@ -95,8 +95,6 @@
   }
 
   &__work-sample-image {
-    margin-bottom: $layout__spacing--standard;
-
     // Images can be styled based on their orientation:
     &--square {}
     &--portrait {}
@@ -104,13 +102,12 @@
   }
 
   &__work-sample-description {
-
+    margin: $layout__spacing--standard auto 0 auto;
     text-align: center;
     width: 100%;
 
     @include screen--medium {
       width: 60%;
-      margin: 0 auto;
     }
   }
 

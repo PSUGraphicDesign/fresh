@@ -41,16 +41,20 @@
             $workImage->isSquare() ? 'graduate__work-sample-image--square' : null,
             $workImage->isPortrait() ? 'graduate__work-sample-image--portrait' : null
           ] ?>
+
           <div class="<?= join(' ', array_filter($workImageClasses)) ?>">
             <? snippet('blocks/responsive-image', [
               'image' => $workImage
             ]) ?>
           </div>
-          <div class="graduate__work-sample-description">
-            <div class="text-content">
-              <?= $sample->description()->kirbytext() ?>
+
+          <? if ($sample->description()->isNotEmpty()) { ?>
+            <div class="graduate__work-sample-description">
+              <div class="text-content">
+                <?= $sample->description()->kirbytext() ?>
+              </div>
             </div>
-          </div>
+          <? } ?>
         </li>
       <? } ?>
     </ul>
