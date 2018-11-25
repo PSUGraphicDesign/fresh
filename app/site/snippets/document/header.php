@@ -13,7 +13,11 @@
         <? $stylesheetSource = $page ?>
       <? } ?>
 
-      <? foreach ($stylesheetSource->files()->filterBy('extension', 'css') as $stylesheet) $stylesheets[] = $stylesheet->url() ?>
+      <? foreach ($stylesheetSource->files()->filterBy('extension', 'css') as $stylesheet) { ?>
+        <? $stylesheets[] = url::build([
+          'query' => ['mtime' => $stylesheet->modified()]
+        ], $stylesheet->url()) ?>
+      <? } ?>
     <? } ?>
 
     <?= css($stylesheets) ?>
