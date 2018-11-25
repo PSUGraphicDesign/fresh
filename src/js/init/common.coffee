@@ -1,4 +1,5 @@
 each = require 'lodash/each'
+throttle = require 'lodash/throttle'
 Between = require 'between.js'
 
 style = require 'util/style'
@@ -30,6 +31,16 @@ module.exports = (app) ->
     style app.$doc, paddingTop: "#{targetHeight}px"
   
   new MediaMatcher undefined, onActive: adjustContentOffset
+
+  # Scrolling Flags
+
+  scrollHandler = (e) ->
+    if window.scrollY > window.innerHeight
+      app.$doc.classList.add 'document--is-scrolled'
+    else
+      app.$doc.classList.remove 'document--is-scrolled'
+
+  window.addEventListener 'scroll', throttle scrollHandler, 100
 
   # Jump Links
 
