@@ -103,11 +103,13 @@
   }
 
   &__work-sample--description {
+
     text-align: center;
     width: 100%;
 
     @include screen--medium {
       width: 60%;
+      margin: 0 auto;
     }
   }
 
