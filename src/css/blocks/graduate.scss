@@ -98,11 +98,16 @@
     margin-bottom: $layout__spacing--wide;
   }
 
-  &__work-sample--image {
+  &__work-sample-image {
     margin-bottom: $layout__spacing--standard;
+
+    // Images can be styled based on their orientation:
+    &--square {}
+    &--portrait {}
+    &--landscape {}
   }
 
-  &__work-sample--description {
+  &__work-sample-description {
 
     text-align: center;
     width: 100%;

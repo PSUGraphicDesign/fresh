@@ -36,12 +36,19 @@
     <ul class="graduate__work-samples">
       <? foreach ($page->work_samples()->toStructure() as $sample) { ?>
         <li class="graduate__work-sample">
-          <div class="graduate__work-sample--image">
+          <? $workImage = $page->image($sample->image()) ?>
+          <? $workImageClasses = [  
+            'graduate__work-sample-image',
+            $workImage->isLandscape() ? 'graduate__work-sample-image--landscape' : null,
+            $workImage->isSquare() ? 'graduate__work-sample-image--square' : null,
+            $workImage->isPortrait() ? 'graduate__work-sample-image--portrait' : null
+          ] ?>
+          <div class="<?= join(' ', array_filter($workImageClasses)) ?>">
             <? snippet('blocks/responsive-image', [
-              'image' => $page->image($sample->image())
+              'image' => $workImage
             ]) ?>
           </div>
-          <div class="graduate__work-sample--description">
+          <div class="graduate__work-sample-description">
             <div class="text-content">
               <?= $sample->description()->kirbytext() ?>
             </div>
