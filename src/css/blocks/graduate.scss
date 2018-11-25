@@ -96,6 +96,13 @@
 
   &__work-sample-image {
     // Images can be styled based on their orientation:
+    &--square,
+    &--portrait {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
     &--square {}
     &--portrait {}
     &--landscape {}
