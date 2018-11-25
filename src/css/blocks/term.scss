@@ -41,7 +41,7 @@
 
   &__about {
     padding: $layout__spacing--standard $layout__spacing--slim;
-    
+
     @include screen--medium {
       padding: $layout__spacing--wide;
     }
@@ -107,7 +107,7 @@
   }
 
   &__sponsor {
-    @include grid__item;
+    @include grid__item(1/2);
 
     margin-bottom: $layout__spacing--slim;
     display: block;
