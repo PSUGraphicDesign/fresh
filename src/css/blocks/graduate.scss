@@ -32,9 +32,10 @@
     @include grid__item();
 
     text-align: center;
+    width: 100%;
 
     @include screen--medium {
-      @include grid__item(2/3);
+      width: 60%;
     }
   }
 
@@ -103,6 +104,11 @@
 
   &__work-sample--description {
     text-align: center;
+    width: 100%;
+
+    @include screen--medium {
+      width: 60%;
+    }
   }
 
   // All Grads Index

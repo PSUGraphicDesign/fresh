@@ -21,7 +21,7 @@
     margin-bottom: $layout__spacing--standard;
 
     @include screen--large {
-      @include grid__item(3/5);
+      @include grid__item(6/10);
     }
   }
 
@@ -29,7 +29,8 @@
     @include grid__item;
     
     @include screen--large {
-      @include grid__item(2/5);
+      @include grid__item(3/10);
+      @include grid__item--push(1/10);
     }
   }
 

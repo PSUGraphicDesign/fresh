@@ -4,10 +4,10 @@
 
   // Details (What, When, Where) Section
   &__details {
-    padding: $layout__spacing--slim;
+    padding: $layout__spacing--standard $layout__spacing--slim;
 
     @include screen--medium {
-      padding: $layout__spacing--wide;
+      padding:  $layout__spacing--standard $layout__spacing--wide;
     }
   }
 
@@ -40,8 +40,8 @@
   // About (Introduction) Section
 
   &__about {
-    padding: $layout__spacing--slim;
-  
+    padding: $layout__spacing--standard $layout__spacing--slim;
+    
     @include screen--medium {
       padding: $layout__spacing--wide;
     }
@@ -73,7 +73,7 @@
   // Grads Section
 
   &__grads {
-    padding: $layout__spacing--slim;
+    padding: $layout__spacing--standard $layout__spacing--slim;
 
     @include screen--medium {
       padding: $layout__spacing--wide;
