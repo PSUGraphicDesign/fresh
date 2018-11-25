@@ -13,7 +13,7 @@
   }
 
   public function isCurrentTerm () {
-    return $site->current_term() == $this->uri();
+    return site()->current_term() == $this->uri();
   }
 
   public function termLogo () {

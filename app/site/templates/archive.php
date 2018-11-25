@@ -16,11 +16,11 @@
     </div>
     <div class="archive__index">
       <? foreach ($years as $year) { ?>
-        <div class="archive__year">
+        <div class="archive__year" id="<?= $year->uid() ?>">
           <h2 class="archive__year-title"><?= $year->title() ?></h2>
           <div class="archive__terms">
             <? foreach ($year->terms() as $term) { ?>
-              <div class="archive__term">
+              <div class="archive__term" id="<?= "{$year->uid()}-{$term->uid()}" ?>">
                 <h3 class="archive__term-title"><?= $term->title() ?></h3>
                 <div class="archive__grads">
                   <? snippet('blocks/grads-index', ['grads' => $term->grads()]) ?>
