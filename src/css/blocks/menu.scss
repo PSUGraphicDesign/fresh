@@ -1,6 +1,10 @@
 .menu {
   padding: $layout__spacing--slim;
 
+  @include screen--medium {
+    padding: $layout__spacing--slim $layout__spacing--standard;
+  }
+
   &--archive {
     background-color: black;
     color: white;
@@ -14,7 +18,11 @@
 
   &__item {
     &--home {
-      width: 150px;
+      width: 80px;
+      
+      @include screen--medium {
+        width: 150px;
+      }
     }
   }
 
