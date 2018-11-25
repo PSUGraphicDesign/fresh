@@ -48,6 +48,9 @@ fields:
   meta_analytics_id:
     label: Google Analytics Tracking ID
     type: text
+  meta_favicon:
+    label: Favicon
+    type: image
 
   # Footer
   section_footer:

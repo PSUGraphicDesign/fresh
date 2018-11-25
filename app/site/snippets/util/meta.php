@@ -58,4 +58,7 @@
 <? } ?>
 
 <? /* Assets */ ?>
-<link rel="icon" href="/assets/images/favicon.ico">
+
+<? if ($favicon = $site->meta_favicon()->toFile()) { ?>
+  <link rel="icon" href="<?= $favicon->url() ?>">
+<? } ?>
