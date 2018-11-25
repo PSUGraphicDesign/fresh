@@ -1,8 +1,8 @@
 <div class="responsive-image js-responsive-image">
-  <?= html::img($image->thumb($options ?? 'safe')->url(), array_merge([
+  <?= html::img($image->thumb(isset($options) ? $options : 'safe')->url(), array_merge([
     'title' => $image->title()->html(),
     'class' => 'responsive-image__image js-responsive-image__image'
-  ], isset($useSrcset) && $useSrcset ? Help::srcset_attrs_for($image, $options ?? []) : [])) ?>
+  ], isset($useSrcset) && $useSrcset ? Help::srcset_attrs_for($image, isset($options) ? $options : []) : [])) ?>
 
   <? if (isset($ratio) && $ratio) { ?>
     <? # A custom ratio was passed: ?>

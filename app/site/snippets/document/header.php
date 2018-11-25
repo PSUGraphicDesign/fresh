@@ -25,7 +25,7 @@
     <? c::get('env') == 'production' ? snippet('util/analytics') : null ?>
   </head>
 
-  <body class="<?= Help::body_classes($page ?? null, $bodyClasses ?? []) ?>" data-action="<?= isset($page) ? $page->template() : "default" ?>">
+  <body class="<?= Help::body_classes(isset($page) ? $page : null, isset($bodyClasses) ? $bodyClasses : []) ?>" data-action="<?= isset($page) ? $page->template() : "default" ?>">
     <header class="document__header js-document__header">
       <? if (isset($useMenu)) { ?>
         <? snippet("blocks/menu--{$useMenu}") ?>
