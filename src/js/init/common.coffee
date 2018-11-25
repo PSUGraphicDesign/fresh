@@ -35,7 +35,7 @@ module.exports = (app) ->
   # Scrolling Flags
 
   scrollHandler = (e) ->
-    if window.scrollY > window.innerHeight
+    if window.scrollY > (window.innerHeight / 2)
       app.$doc.classList.add 'document--is-scrolled'
     else
       app.$doc.classList.remove 'document--is-scrolled'
