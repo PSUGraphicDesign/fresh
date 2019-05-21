@@ -12,16 +12,17 @@ fields:
   profile_photo:
     label: Profile Photo
     type: image
+    help: JPG only please.
   featured_photo:
     label: Featured Thumbnail Image
     type: image
     width: 1/2
-    help: This image will show on load.
+    help: This image will show on load. JPG only please.
   alt_photo:
     label: Alternate Thumbnail Image
     type: image
     width: 1/2
-    help: This image is optional and will show on hover.
+    help: This image is optional and will show on hover. JPG only please.
   bio:
     label: Bio
     type: textarea
@@ -46,6 +47,7 @@ fields:
       image:
         label: Image
         type: image
+        help: JPGs only please.
       description:
         label: Description
         type: textarea

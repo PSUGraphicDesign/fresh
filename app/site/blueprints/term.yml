@@ -44,6 +44,7 @@ fields:
   hero:
     label: Hero Image
     type: image
+    help: JPG only please.
 
   # Details
   section_details:
