@@ -1,6 +1,8 @@
 title: Graduate
 pages: false
-files: true
+files:
+  width: 2500
+  height: 4000
 icon: user
 fields:
   title:
