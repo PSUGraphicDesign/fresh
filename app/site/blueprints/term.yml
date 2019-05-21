@@ -4,12 +4,23 @@ pages:
     - graduate
   sort: title asc
   num: zero
-files: true
+files: 
+  width: 4000
+  height: 4000
 icon: calendar-plus-o
 fields:
   title:
     label: Title
     type: text
+  
+  section_style:
+    label: Style
+    type: headline
+
+  stylesheet:
+    label: CSS Stylesheet
+    type: textarea
+    buttons: false
 
   section_meta:
     label: Event Details
@@ -17,41 +28,19 @@ fields:
   date:
     label: Date
     type: date
-    width: 1/3
-  time_start:
-    label: Start Time
-    type: time
-    format: 12
-    interval: 30
-    width: 1/3
-  time_end:
-    label: End Time
-    type: time
-    format: 12
-    interval: 30
-    width: 1/3
-  directions:
-    label: Directions Link
-    type: url
-
-  # Main Nav
-
-  section_nav:
-    label: Header Menu
-    type: headline
   ticket_link:
     label: Ticketing Link
     type: url
+
+  # Graphics
+  section_graphics:
+    label: Graphics Section
+    type: headline
   logo:
     label: Logo
     type: image
     help: >
       This will replace the "home" link in the menu.
-
-  # Hero
-  section_hero:
-    label: Hero Section
-    type: headline
   hero:
     label: Hero Image
     type: image
@@ -60,16 +49,25 @@ fields:
   section_details:
     label: Details Section
     type: headline
-  what:
+  what_header:
     label: What
+    type: text
+    width: 1/3
+  when_header:
+    label: When
+    type: text
+    width: 1/3
+  where_header:
+    label: Where
+    type: text
+    width: 1/3
+  what:
     type: textarea
     width: 1/3
   when:
-    label: When
     type: textarea
     width: 1/3
   where:
-    label: Where
     type: textarea
     width: 1/3
 
@@ -112,4 +110,3 @@ fields:
       link:
         label: URL
         type: url
-
