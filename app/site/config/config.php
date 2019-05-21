@@ -31,3 +31,5 @@ c::set('routes', [
     'action'  => function () { return page(site()->current_term()); }
   ]
 ]);
+
+c::set('panel.stylesheet', 'assets/kirby/panel.css');
