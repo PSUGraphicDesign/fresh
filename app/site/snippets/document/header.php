@@ -4,7 +4,10 @@
     <? snippet('util/document') ?>
     <? snippet('util/meta') ?>
 
-    <? $stylesheets = [Help::versioned_asset_url('css', 'app.css')] ?>
+    <? $stylesheets = [
+      Help::versioned_asset_url('css', 'app.css')
+    ] ?>
+    <?= css($stylesheets) ?>
 
     <? if (isset($page)) { ?>
       <? if ($page->intendedTemplate() == 'graduate') { ?>
@@ -13,14 +16,19 @@
         <? $stylesheetSource = $page ?>
       <? } ?>
 
+      <? /*
       <? foreach ($stylesheetSource->files()->filterBy('extension', 'css') as $stylesheet) { ?>
         <? $stylesheets[] = url::build([
           'query' => ['mtime' => $stylesheet->modified()]
         ], $stylesheet->url()) ?>
       <? } ?>
+      */ ?>
+
+      <? if ($stylesheetSource->stylesheet()->isNotEmpty()) { ?>
+        <style><?= $stylesheetSource->stylesheet()->html() ?></style>
+      <? } ?>
     <? } ?>
 
-    <?= css($stylesheets) ?>
 
     <? c::get('env') == 'production' ? snippet('util/analytics') : null ?>
   </head>
