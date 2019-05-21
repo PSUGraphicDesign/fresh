@@ -13,20 +13,22 @@
   <div class="term__details">
     <ul class="term__details-items">
       <li class="term__details-item term__details-item--what">
+        <h3 class="term__details-item--header "><?= $term->what_header() ?></h3>
         <div class="text-content">
           <?= $term->what()->kirbytext() ?>
         </div>
       </li>
       <li class="term__details-item term__details-item--when">
+        <h3 class="term__details-item--header "><?= $term->when_header() ?></h3>
         <div class="text-content">
           <?= $term->when()->kirbytext() ?>
         </div>
       </li>
       <li class="term__details-item term__details-item--where">
+        <h3 class="term__details-item--header "><?= $term->where_header() ?></h3>
         <div class="text-content">
           <?= $term->where()->kirbytext() ?>
         </div>
-        <a class="term__details-item-action" href="<?= $term->directions() ?>" target="_blank">Get Directions</a>
       </li>
     </ul>
   </div>
