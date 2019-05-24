@@ -44,26 +44,29 @@
     </div>
   </div>
 
-  <div class="term__grads" id="grads">
-    <div class="term__grads-content">
-      <h2 class="term__grads-header"><?= $term->grads_header() ?></h2>
-      <? snippet('blocks/grads-index', ['grads' => $term->grads()]) ?>
+  <? if ($grads->count()) { ?>
+    <div class="term__grads" id="grads">
+      <div class="term__grads-content">
+        <h2 class="term__grads-header"><?= $term->grads_header() ?></h2>
+        <? snippet('blocks/grads-index', ['grads' => $grads]) ?>
+      </div>
     </div>
-  </div>
+  <? } ?>
 
-  <div class="term__sponsors">
-    <h2 class="term__sponsors-header"><?= $term->sponsors_header() ?></h2>
-    <ul class="term__sponsors-list">
-      <? foreach ($term->sponsors()->toStructure() as $sponsor) { ?>
-        <li class="term__sponsor">
-          <a class="term__sponsor-link" href="<?= $sponsor->link() ?>" target="_blank">
-            <? snippet('blocks/responsive-image', ['image' => $term->image($sponsor->logo())]) ?>
-          </a>
-        </li>
-      <? } ?>
-    </ul>
-  </div>
-
+  <? if ($sponsors->count()) { ?>
+    <div class="term__sponsors">
+      <h2 class="term__sponsors-header"><?= $term->sponsors_header() ?></h2>
+      <ul class="term__sponsors-list">
+        <? foreach ($sponsors as $sponsor) { ?>
+          <li class="term__sponsor">
+            <a class="term__sponsor-link" href="<?= $sponsor->link() ?>" target="_blank">
+              <? snippet('blocks/responsive-image', ['image' => $term->image($sponsor->logo())]) ?>
+            </a>
+          </li>
+        <? } ?>
+      </ul>
+    </div>
+  <? } ?>
 </div>
 
 <? snippet('document/footer') ?>

@@ -7,6 +7,7 @@
 
   return [
     'term' => $page,
-    'grads' => $page->grads()
+    'grads' => $page->grads(),
+    'sponsors' => $page->sponsors()->toStructure()
   ];
 };
