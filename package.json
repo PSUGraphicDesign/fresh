@@ -22,7 +22,7 @@
   "dependencies": {
     "between.js": "^0.1.2-fix.2",
     "jquery": "^2.1.4",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.19"
   },
   "scripts": {
     "dev": "npm-run-all --parallel styles:watch scripts:watch",
