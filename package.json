@@ -13,7 +13,7 @@
     "coffeeify": "^3.0.1",
     "coffeescript": "^1.12.7",
     "mime": "^2.3.1",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0",
     "uglify-js": "^3.3.12",

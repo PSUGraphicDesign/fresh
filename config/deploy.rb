@@ -1,5 +1,5 @@
-# config valid only for current version of Capistrano
-lock '3.6.0'
+# config valid for current version and patch releases of Capistrano
+lock "~> 3.14.1"
 
 set :application, 'fresh'
 set :repo_url, 'git@github.com:PSUGraphicDesign/fresh.git'
@@ -8,29 +8,24 @@ set :repo_url, 'git@github.com:PSUGraphicDesign/fresh.git'
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+# set :deploy_to, "/var/www/my_app_name"
 
-# Git Submodule Strategy Options
-set :git_strategy, Capistrano::Git::SubmoduleStrategy
-set :git_keep_meta, false
+# Default value for :format is :airbrussh.
+# set :format, :airbrussh
 
-# Default value for :scm is :git
-# set :scm, :git
-
-# Default value for :format is :pretty
-# set :format, :pretty
-
-# Default value for :log_level is :debug
-set :log_level, :info
+# You can configure the Airbrussh format using :format_options.
+# These are the defaults.
+# set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
 
 # Default value for :pty is false
 # set :pty, true
 
 # Default value for :linked_files is []
-# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+# append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+
 set :linked_dirs, fetch(:linked_dirs, []).push(
   'app/content',
   'app/site/accounts',
@@ -45,5 +40,5 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-before :deploy, 'assets:compile'
+after 'deploy:updated', 'assets:compile'
 after 'deploy:updated', 'assets:upload'

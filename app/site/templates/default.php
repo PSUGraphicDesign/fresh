@@ -1,5 +1,5 @@
-<? snippet('document/header') ?>
+<?php snippet('document/header') ?>
 
 <h1><?= $page->title()->html() ?></h1>
 
-<? snippet('document/footer') ?>
+<?php snippet('document/footer') ?>

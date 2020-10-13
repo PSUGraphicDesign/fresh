@@ -1,7 +1,7 @@
     </main>
 
     <footer class="document__footer js-document__footer">
-      <? snippet('blocks/footer') ?>
+      <?php snippet('blocks/footer') ?>
     </footer>
 
     <?= js([

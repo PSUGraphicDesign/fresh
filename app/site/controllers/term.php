@@ -1,4 +1,4 @@
-<? return function ($site, $pages, $page) {
+<?php return function ($site, $pages, $page) {
   if (!$page->isCurrentTerm()) {
     go(url::build([
       'hash' => "{$page->year()->uid()}-{$page->uid()}"

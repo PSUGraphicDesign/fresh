@@ -5,11 +5,11 @@
     </li>
     <li class="menu__item menu__item--home">
       <a class="menu__item-link menu__item-link--home" href="<?= url('/') ?>">
-        <? if ($page->termLogo()) { ?>
-          <? snippet('blocks/responsive-image', ['image' => $page->termLogo()]) ?>
-        <? } else { ?>
+        <?php if ($page->termLogo()) { ?>
+          <?php snippet('blocks/responsive-image', ['image' => $page->termLogo()]) ?>
+        <?php } else { ?>
           Home
-        <? } ?>
+        <?php } ?>
       </a>
     </li>
     <li class="menu__item menu__item--grads">

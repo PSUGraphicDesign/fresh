@@ -1,31 +1,31 @@
 <div class="responsive-image js-responsive-image">
-  <? $imgAttrs = [
+  <?php $imgAttrs = [
     'title' => $image->title()->html(),
     'class' => 'responsive-image__image js-responsive-image__image'
   ] ?>
 
-  <? if (isset($useSrcset) && $useSrcset) { ?>
-    <? $imgAttrs = array_merge($imgAttrs, Help::srcset_attrs_for($image, isset($options) ? $options : [])) ?>
-  <? } ?>
+  <?php if (isset($useSrcset) && $useSrcset) { ?>
+    <?php $imgAttrs = array_merge($imgAttrs, Help::srcset_attrs_for($image, isset($options) ? $options : [])) ?>
+  <?php } ?>
 
-  <? $imgUrl = $image->thumb(isset($options) ? $options : 'safe')->url() ?>
+  <?php $imgUrl = $image->thumb(isset($options) ? $options : 'safe')->url() ?>
 
-  <? if (isset($isLazy) && $isLazy) { ?>
-    <? $imgAttrs = array_merge($imgAttrs, ['data-src' => $imgUrl, 'data-is-lazy' => 1]) ?>
-  <? } else { ?>
-    <? $imgAttrs = array_merge($imgAttrs, ['src' => $imgUrl]) ?>
-  <? } ?>
+  <?php if (isset($isLazy) && $isLazy) { ?>
+    <?php $imgAttrs = array_merge($imgAttrs, ['data-src' => $imgUrl, 'data-is-lazy' => 1]) ?>
+  <?php } else { ?>
+    <?php $imgAttrs = array_merge($imgAttrs, ['src' => $imgUrl]) ?>
+  <?php } ?>
 
   <?= html::tag('img', $imgAttrs) ?>
 
-  <? if (isset($ratio) && $ratio) { ?>
-    <? # A custom ratio was passed: ?>
+  <?php if (isset($ratio) && $ratio) { ?>
+    <?php # A custom ratio was passed: ?>
     <div class="responsive-image__shim responsive-image__shim--is-custom-ratio" style="padding-bottom: <?= (1 / $ratio) * 100 ?>%"></div>
-  <? } else if (isset($ratio) && $ratio === false) { ?>
-    <? # We should not set a ratio: ?>
+  <?php } else if (isset($ratio) && $ratio === false) { ?>
+    <?php # We should not set a ratio: ?>
     <div class="responsive-image__shim responsive-image__shim--is-without-ratio"></div>
-  <? } else { ?>
-    <? # Default behavior: ?>
+  <?php } else { ?>
+    <?php # Default behavior: ?>
     <div class="responsive-image__shim responsive-image__shim--is-auto-ratio" style="padding-bottom: <?= (1 / $image->ratio()) * 100 ?>%"></div>
-  <? } ?>
+  <?php } ?>
 </div>

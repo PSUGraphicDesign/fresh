@@ -1,4 +1,4 @@
-<? class Help {
+<?php class Help {
   public static function body_classes ($page, $extra = []) {
     if ($page) {
       $pageClasses = [

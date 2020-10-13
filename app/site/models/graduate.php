@@ -1,4 +1,4 @@
-<? class GraduatePage extends Page {
+<?php class GraduatePage extends Page {
   public function term () {
     return $this->parent();
   }

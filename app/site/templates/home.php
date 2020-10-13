@@ -1,4 +1,4 @@
-<? snippet('document/header') ?>
+<?php snippet('document/header') ?>
 
 
-<? snippet('document/footer') ?>
+<?php snippet('document/footer') ?>

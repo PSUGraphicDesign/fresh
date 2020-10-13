@@ -1,4 +1,4 @@
-<? snippet('document/header', [
+<?php snippet('document/header', [
   'useMenu' => 'current-term'
 ]) ?>
 
@@ -6,7 +6,7 @@
 
   <div class="term__hero">
     <div class="term__hero-content">
-      <? snippet('blocks/responsive-image', ['image' => $term->hero()->toFile()]) ?>
+      <?php snippet('blocks/responsive-image', ['image' => $term->hero()->toFile()]) ?>
     </div>
   </div>
 
@@ -44,29 +44,29 @@
     </div>
   </div>
 
-  <? if ($grads->count()) { ?>
+  <?php if ($grads->count()) { ?>
     <div class="term__grads" id="grads">
       <div class="term__grads-content">
         <h2 class="term__grads-header"><?= $term->grads_header() ?></h2>
-        <? snippet('blocks/grads-index', ['grads' => $grads]) ?>
+        <?php snippet('blocks/grads-index', ['grads' => $grads]) ?>
       </div>
     </div>
-  <? } ?>
+  <?php } ?>
 
-  <? if ($sponsors->count()) { ?>
+  <?php if ($sponsors->count()) { ?>
     <div class="term__sponsors">
       <h2 class="term__sponsors-header"><?= $term->sponsors_header() ?></h2>
       <ul class="term__sponsors-list">
-        <? foreach ($sponsors as $sponsor) { ?>
+        <?php foreach ($sponsors as $sponsor) { ?>
           <li class="term__sponsor">
             <a class="term__sponsor-link" href="<?= $sponsor->link() ?>" target="_blank">
-              <? snippet('blocks/responsive-image', ['image' => $term->image($sponsor->logo())]) ?>
+              <?php snippet('blocks/responsive-image', ['image' => $term->image($sponsor->logo())]) ?>
             </a>
           </li>
-        <? } ?>
+        <?php } ?>
       </ul>
     </div>
-  <? } ?>
+  <?php } ?>
 </div>
 
-<? snippet('document/footer') ?>
+<?php snippet('document/footer') ?>

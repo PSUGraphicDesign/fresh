@@ -1,23 +1,23 @@
-<? $title = $site->title()->html() ?>
-<? if (isset($page) && !$page->isHomePage()) $title = "{$page->title()} | $title" ?>
+<?php $title = $site->title()->html() ?>
+<?php if (isset($page) && !$page->isHomePage()) $title = "{$page->title()} | $title" ?>
 
-<? $description = isset($page) && $page->meta_description()->isNotEmpty() ? $page->meta_description()->html() : $site->meta_description()->html() ?>
-<? $previewImage = isset($page) && $page->meta_image()->toFile() ? $page->meta_image()->toFile() : $site->meta_image()->toFile() ?>
+<?php $description = isset($page) && $page->meta_description()->isNotEmpty() ? $page->meta_description()->html() : $site->meta_description()->html() ?>
+<?php $previewImage = isset($page) && $page->meta_image()->toFile() ? $page->meta_image()->toFile() : $site->meta_image()->toFile() ?>
 
-<? /* Humans */ ?>
+<?php /* Humans */ ?>
 <title><?= $title ?></title>
 
 <meta name="description" content="<?= $description ?>">
 <meta name="subject" content="<?= $site->meta_subject()->html() ?>">
 <link rel="author" href="humans.txt">
 
-<? /* Social + Open Graph */ ?>
+<?php /* Social + Open Graph */ ?>
 <meta property="og:url" content="<?= $site->url() ?>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?= $title ?>">
-<? if ($previewImage) { ?>
+<?php if ($previewImage) { ?>
   <meta property="og:image" content="<?= $previewImage->thumb('thumbnail')->url() ?>">
-<? } ?>
+<?php } ?>
 <meta property="og:description" content="<?= $description ?>">
 <meta property="og:site_name" content="<?= $site->title() ?>">
 <meta property="og:locale" content="en_US">
@@ -30,35 +30,35 @@
 <meta name="twitter:title" content="<?= $title ?>">
 <meta name="twitter:text:title" content="<?= $title ?>">
 <meta name="twitter:description" content="<?= $description ?>">
-<? if ($previewImage) { ?>
+<?php if ($previewImage) { ?>
   <meta name="twitter:image" content="<?= $previewImage->thumb('thumbnail')->url() ?>">
-<? } ?>
+<?php } ?>
 
-<? /* Crawlers, Bots, Etc */ ?>
+<?php /* Crawlers, Bots, Etc */ ?>
 <meta name="robots" content="index,follow">
 <meta name="googlebot" content="index,follow">
 <meta name="generator" content="Kirby CMS">
 
-<? /* Location */ ?>
-<? if ($site->location()->isNotEmpty() && $location = $site->location()->yaml()) { ?>
+<?php /* Location */ ?>
+<?php if ($site->location()->isNotEmpty() && $location = $site->location()->yaml()) { ?>
   <meta name="geo.position" content="<?= $location['lat'] ?>; <?= $location['lng'] ?>">
   <meta name="geo.region" content="US">
   <meta name="geo.placename" content="<?= $location['address'] ?>">
-<? } ?>
+<?php } ?>
 
-<? /* Languages */ ?>
-<? if (isset($page) && $site->languages()->count() > 1) { ?>
-  <? foreach ($site->languages() as $language) { ?>
+<?php /* Languages */ ?>
+<?php if (isset($page) && $site->languages()->count() > 1) { ?>
+  <?php foreach ($site->languages() as $language) { ?>
     <?= html::tag('link', null, [
       'rel' => 'alternate',
       'hreflang' => $language->code(),
       'href' => $page->url($language->code())
     ]); ?>
-  <? } ?>
-<? } ?>
+  <?php } ?>
+<?php } ?>
 
-<? /* Assets */ ?>
+<?php /* Assets */ ?>
 
-<? if ($favicon = $site->meta_favicon()->toFile()) { ?>
+<?php if ($favicon = $site->meta_favicon()->toFile()) { ?>
   <link rel="icon" href="<?= $favicon->url() ?>">
-<? } ?>
+<?php } ?>

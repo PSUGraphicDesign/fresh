@@ -1,4 +1,4 @@
-<? class LocalValetDriver extends ValetDriver
+<?php class LocalValetDriver extends ValetDriver
 {
     /**
      * Determine if the driver serves the request.
