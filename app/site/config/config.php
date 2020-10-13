@@ -1,5 +1,4 @@
 <?php
-c::set('debug', true);
 
 # Multi-lang is enabled, by default:
 c::set('languages', [
