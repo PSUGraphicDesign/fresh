@@ -22,6 +22,36 @@
     }
   }
 
+  &__nav {
+    display: flex;
+    padding: $layout__spacing--slim;
+
+    @include screen--medium {
+      padding: $layout__spacing--wide;
+    }
+  }
+
+  &__nav-year {
+    margin-right: 1em;
+
+    @include screen--medium {
+      font-size: 2rem;
+    }
+  }
+
+  &__nav-year-link {
+    color: #CCCCCC;
+
+    &:hover {
+      color: $color__black;
+    }
+
+    &--is-active {
+      border-bottom: 2px solid $color__black;
+      color: $color__black;
+    }
+  }
+
   &__index {
     padding: $layout__spacing--slim;
 

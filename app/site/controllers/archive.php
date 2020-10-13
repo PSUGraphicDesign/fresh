@@ -1,6 +1,4 @@
 <?php return function ($site, $pages, $page) {
-  return [
-    'archive' => $page,
-    'years' => $page->years()->sortBy('title', 'desc')
-  ];
+  # Just redirect to the most recent year:
+  go($page->years()->sortBy('title', 'desc')->first());
 };

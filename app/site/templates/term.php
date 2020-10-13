@@ -3,7 +3,6 @@
 ]) ?>
 
 <div class="term">
-
   <div class="term__hero">
     <div class="term__hero-content">
       <?php snippet('blocks/responsive-image', ['image' => $term->hero()->toFile()]) ?>
