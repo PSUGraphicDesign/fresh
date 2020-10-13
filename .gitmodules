@@ -1,9 +1,9 @@
 [submodule "app/panel"]
 	path = app/panel
-	url = https://github.com/getkirby/panel.git
+	url = https://github.com/getkirby-v2/panel.git
 [submodule "app/kirby"]
 	path = app/kirby
-	url = https://github.com/getkirby/kirby.git
+	url = https://github.com/getkirby-v2/kirby.git
 [submodule "app/site/plugins/map"]
 	path = app/site/plugins/map
 	url = https://github.com/AugustMiller/kirby-map-field.git
