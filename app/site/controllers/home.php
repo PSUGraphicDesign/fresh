@@ -1,5 +1,6 @@
 <?php return function ($site, $pages, $page) {
-    $currentTerm = page($site->current_term());
+  $currentTerm = page($site->current_term());
+
   return [
     'term' => $currentTerm,
     'grads' => $currentTerm->grads(),
