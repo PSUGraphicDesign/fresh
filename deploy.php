@@ -20,7 +20,7 @@ set('ssh_multiplexing', true);
 
 // Shared files/dirs between deploys
 add('shared_files', [
-    'app/config.{{hostname}}.php'
+    'app/site/config/config.{{hostname}}.php'
 ]);
 
 add('shared_dirs', [
