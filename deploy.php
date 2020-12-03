@@ -24,9 +24,10 @@ add('shared_files', [
 ]);
 
 add('shared_dirs', [
+    'app/content',
     'app/thumbs',
     'app/site/cache',
-    'app/site/',
+    'app/site/accounts',
     'web/uploads',
 ]);
 
