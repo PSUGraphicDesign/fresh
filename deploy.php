@@ -7,7 +7,7 @@ require 'recipe/composer.php';
 set('application', 'fresh');
 
 // Project repository
-set('repository', 'git@github.com:psugd/fresh.git');
+set('repository', 'git@github.com:PSUGraphicDesign/fresh.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 // set('git_tty', true);
