@@ -35,9 +35,9 @@
   </div>
 
   <div class="archive__grads">
-    <?php if ($term->grads()->count() > 0) { ?>
+    <?php if ($page->grads()->count() > 0) { ?>
       <?php snippet('blocks/grads-index', [
-        'grads' => $term->grads(),
+        'grads' => $page->grads(),
         'includeAltImage' => false,
       ]) ?>
     <?php } else { ?>
