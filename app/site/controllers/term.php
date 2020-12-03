@@ -1,8 +1,8 @@
 <?php return function ($site, $pages, $page) {
   if (!$page->isCurrentTerm()) {
-    go(url::build([
-      'hash' => "{$page->year()->uid()}-{$page->uid()}"
-    ], page('archive')->url()));
+    return go(url::build([
+      'hash' => "term-{$page->uid()}"
+    ], $page->year()->url()));
   }
 
   return [
