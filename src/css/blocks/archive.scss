@@ -23,7 +23,6 @@
   }
 
   &__nav {
-    display: flex;
     padding: $layout__spacing--slim;
 
     @include screen--medium {
@@ -31,7 +30,12 @@
     }
   }
 
-  &__nav-year {
+  &__years {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__year {
     margin-right: 1em;
 
     @include screen--medium {
@@ -39,8 +43,8 @@
     }
   }
 
-  &__nav-year-link {
-    color: #CCCCCC;
+  &__year-link {
+    color: $color__grey;
 
     &:hover {
       color: $color__black;
@@ -52,42 +56,33 @@
     }
   }
 
-  &__index {
-    padding: $layout__spacing--slim;
+  &__terms {
+    display: flex;
+  }
 
-    @include screen--medium {
-      padding: $layout__spacing--wide;
+  &__term {
+    margin-right: 1rem;
+  }
+
+  &__term-link {
+    color: $color__grey;
+
+    &:hover {
+      color: $color__black;
+    }
+
+    &--is-active {
+      color: $color__black;
     }
   }
 
-  &__year {
-    margin-bottom: $layout__spacing--standard;
-    border-top: 1px solid $color__black;
-  }
-
-  &__year-title {
-    margin-top: $layout__spacing--slim;
-    margin-bottom: $layout__spacing--standard;
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-
-  &__terms {
-    margin-bottom: $layout__spacing--standard;
-  }
-
-  &__term-title {
-    margin-bottom: $layout__spacing--standard;
-    font-size: 1.25rem;
-  }
-
   &__grads {
-    margin-bottom: $layout__spacing--standard;
-
-    .grads-index__grad {
-      @include screen--medium {
-        @include grid__item(1/4);
-      }
+    padding: $layout__spacing--slim;
+    padding-top: 0;
+    
+    @include screen--medium {
+      padding: $layout__spacing--wide;
+      padding-top: 0;
     }
   }
 

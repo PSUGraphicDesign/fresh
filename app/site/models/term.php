@@ -1,9 +1,4 @@
 <?php class TermPage extends Page {
-  public function title () {
-    // Term titles should include their year!
-    return join(' ', [parent::title(), $this->year()->title()]);
-  }
-
   public function year () {
     return $this->parent();
   }

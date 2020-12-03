@@ -72,7 +72,7 @@ module.exports = (app) ->
     do ->
       ref = $link.getAttribute('href')
 
-      return unless ref.indexOf('#') is 0
+      return unless ref and ref.indexOf('#') is 0
 
       $link.addEventListener 'click', (e) ->
         e.preventDefault()

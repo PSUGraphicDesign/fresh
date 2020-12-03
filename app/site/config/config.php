@@ -24,11 +24,6 @@ c::set('thumbs.presets', [
 ]);
 
 # Custom Routes
-c::set('routes', [
-  [
-    'pattern' => '/',
-    'action'  => function () { return page(site()->current_term()); }
-  ]
-]);
+c::set('routes', []);
 
 c::set('panel.stylesheet', 'assets/kirby/panel.css');

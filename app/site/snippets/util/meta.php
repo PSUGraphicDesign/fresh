@@ -1,5 +1,9 @@
-<?php $title = $site->title()->html() ?>
-<?php if (isset($page) && !$page->isHomePage()) $title = "{$page->title()} | $title" ?>
+<?php if ($customTitle) { ?>
+  <?php $title = $customTitle ?>
+<?php } else if (isset($page)) { ?>
+  <?php $title = $page->title() ?>
+<?php } ?>
+<?php $title = "{$title} | {$site->title()}" ?>
 
 <?php $description = isset($page) && $page->meta_description()->isNotEmpty() ? $page->meta_description()->html() : $site->meta_description()->html() ?>
 <?php $previewImage = isset($page) && $page->meta_image()->toFile() ? $page->meta_image()->toFile() : $site->meta_image()->toFile() ?>

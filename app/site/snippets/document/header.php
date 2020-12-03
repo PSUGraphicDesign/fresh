@@ -2,33 +2,17 @@
 <html class="root" lang="en">
   <head>
     <?php snippet('util/document') ?>
-    <?php snippet('util/meta') ?>
+    <?php snippet('util/meta', ['customTitle' => $customTitle ?? null]) ?>
 
     <?php $stylesheets = [
       Help::versioned_asset_url('css', 'app.css')
     ] ?>
     <?= css($stylesheets) ?>
-
-    <?php if (isset($page)) { ?>
-      <?php if ($page->intendedTemplate() == 'graduate') { ?>
-        <?php $stylesheetSource = $page->parent() ?>
-      <?php } else { ?>
-        <?php $stylesheetSource = $page ?>
-      <?php } ?>
-
-      <?php /*
-      <?php foreach ($stylesheetSource->files()->filterBy('extension', 'css') as $stylesheet) { ?>
-        <?php $stylesheets[] = url::build([
-          'query' => ['mtime' => $stylesheet->modified()]
-        ], $stylesheet->url()) ?>
-      <?php } ?>
-      */ ?>
-
-      <?php if ($stylesheetSource->stylesheet()->isNotEmpty()) { ?>
-        <style><?= $stylesheetSource->stylesheet()->html() ?></style>
+    <?php if (isset($term) && $term->isCurrentTerm()) { ?>
+      <?php if ($term->stylesheet()->isNotEmpty()) { ?>
+        <style><?= $term->stylesheet()->html() ?></style>
       <?php } ?>
     <?php } ?>
-
 
     <?php c::get('env') == 'production' ? snippet('util/analytics') : null ?>
   </head>

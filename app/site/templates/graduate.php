@@ -2,7 +2,9 @@
   'bodyClasses' => [
     $page->isInCurrentTerm() ? 'document--is-current-term' : 'document--is-archived-term'
   ],
-  'useMenu' => $page->isInCurrentTerm() ? 'current-term' : 'archive'
+  'useMenu' => $page->isInCurrentTerm() ? 'current-term' : 'archive',
+  'term' => $term,
+  'customTitle' => "{$page->title()}, {$term->title()} {$term->year()->title()}"
 ]) ?>
 
 <?php $graduateClasses = [

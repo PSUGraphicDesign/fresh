@@ -1,71 +1,52 @@
 <?php snippet('document/header', [
-  'useMenu' => 'current-term'
+  'useMenu' => 'archive',
+  'term' => $page,
+  'customTitle' => "Alumni Archive: {$page->title()} {$page->year()->title()}"
 ]) ?>
 
-<div class="term">
-  <div class="term__hero">
-    <div class="term__hero-content">
-      <?php snippet('blocks/responsive-image', ['image' => $term->hero()->toFile()]) ?>
+<div class="archive">
+  <div class="archive__intro">
+    <div class="archive__logo">
+      <?php snippet('blocks/responsive-image', ['image' => $archive->psugd_logo()->toFile()]) ?>
     </div>
-  </div>
-
-  <div class="term__details">
-    <ul class="term__details-items">
-      <li class="term__details-item term__details-item--what">
-        <h3 class="term__details-item--header "><?= $term->what_header() ?></h3>
-        <div class="text-content">
-          <?= $term->what()->kirbytext() ?>
-        </div>
-      </li>
-      <li class="term__details-item term__details-item--when">
-        <h3 class="term__details-item--header "><?= $term->when_header() ?></h3>
-        <div class="text-content">
-          <?= $term->when()->kirbytext() ?>
-        </div>
-      </li>
-      <li class="term__details-item term__details-item--where">
-        <h3 class="term__details-item--header "><?= $term->where_header() ?></h3>
-        <div class="text-content">
-          <?= $term->where()->kirbytext() ?>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <div class="term__about">
-    <div class="term__about-content">
-      <div class="term__about-message">
-        <div class="text-content">
-          <?= $term->about()->kirbytext() ?>
-        </div>
-      </div>
-      <a class="term__attend-button" href="<?= $term->ticket_link() ?>" target="_blank">Attend</a>
-    </div>
-  </div>
-
-  <?php if ($grads->count()) { ?>
-    <div class="term__grads" id="grads">
-      <div class="term__grads-content">
-        <h2 class="term__grads-header"><?= $term->grads_header() ?></h2>
-        <?php snippet('blocks/grads-index', ['grads' => $grads]) ?>
+    <h1 class="archive__title"><?= $archive->title() ?></h1>
+    <div class="archive__description">
+      <div class="text-content">
+        <?= $archive->description()->kirbytext() ?>
       </div>
     </div>
-  <?php } ?>
+  </div>
 
-  <?php if ($sponsors->count()) { ?>
-    <div class="term__sponsors">
-      <h2 class="term__sponsors-header"><?= $term->sponsors_header() ?></h2>
-      <ul class="term__sponsors-list">
-        <?php foreach ($sponsors as $sponsor) { ?>
-          <li class="term__sponsor">
-            <a class="term__sponsor-link" href="<?= $sponsor->link() ?>" target="_blank">
-              <?php snippet('blocks/responsive-image', ['image' => $term->image($sponsor->logo())]) ?>
-            </a>
-          </li>
-        <?php } ?>
-      </ul>
+  <div class="archive__nav">
+    <div class="archive__years">
+      <?php foreach ($archive->years()->sortBy('sort')->flip() as $year) { ?>
+        <div class="archive__year">
+          <a class="archive__year-link archive__year-link--is-<?= $year->is($page->year()) ? 'active' : 'inactive' ?>" href="<?= $year->url() ?>"><?= $year->title()->html() ?></a>
+        </div>
+      <?php } ?>
     </div>
-  <?php } ?>
+    <div class="archive__terms">
+      <?php foreach ($page->year()->terms()->sortBy('sort') as $term) { ?>
+        <div class="archive__term">
+          <a class="archive__term-link archive__term-link--is-<?= $term->is($page) ? 'active' : 'inactive' ?>" href="<?= $term->url() ?>"><?= $term->title() ?></a>
+        </div>
+      <?php } ?>
+    </div>
+  </div>
+
+  <div class="archive__grads">
+    <?php if ($term->grads()->count() > 0) { ?>
+      <?php snippet('blocks/grads-index', [
+        'grads' => $term->grads(),
+        'includeAltImage' => false,
+      ]) ?>
+    <?php } else { ?>
+      <div class="text-content">
+        <p>No graduates have been added for this term.</p>
+      </div>
+    <?php } ?>
+  </div>
 </div>
 
 <?php snippet('document/footer') ?>
+

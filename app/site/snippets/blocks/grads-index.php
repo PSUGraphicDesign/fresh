@@ -13,7 +13,8 @@
                 ]) ?>
               </div>
             <?php } ?>
-            <?php if ($includeAltImage ?? true && $altImage = $grad->alt_photo()->toFile()) { ?>
+
+            <?php if (($includeAltImage ?? true) && $altImage = $grad->alt_photo()->toFile()) { ?>
               <div class="grads-index__grad-image grads-index__grad-image--alternate">
                 <?php snippet('blocks/responsive-image', [
                   'image' => $altImage,

@@ -1,13 +1,11 @@
 <?php return function ($site, $pages, $page) {
-  if (!$page->isCurrentTerm()) {
-    return go(url::build([
-      'hash' => "term-{$page->uid()}"
-    ], $page->year()->url()));
+  if ($page->isCurrentTerm()) {
+    return go('/');
   }
 
   return [
-    'term' => $page,
+    'archive' => page('archive'),
     'grads' => $page->grads(),
-    'sponsors' => $page->sponsors()->toStructure()
+    'sponsors' => $page->sponsors()->toStructure(),
   ];
 };

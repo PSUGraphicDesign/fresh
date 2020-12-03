@@ -8,12 +8,43 @@
   &--archive {
     background-color: black;
     color: white;
+    font-size: 0.75rem;
+
+    @include screen--medium {
+      display: flex;
+      font-size: 1rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__breadcrumbs {
+    display: flex;
+  }
+
+  &__breadcrumb {
+    &::after {
+      color: $color__grey--dark;
+      content: '/';
+      margin: 0 0.75em;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__breadcrumb-link {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__items {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   &__item {
