@@ -1,0 +1,8 @@
+{
+    "name": "psugd/fresh",
+    "type": "project",
+    "require": {},
+    "require-dev": {
+        "deployer/deployer": "^6.8"
+    }
+}
