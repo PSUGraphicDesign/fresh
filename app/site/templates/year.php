@@ -30,7 +30,10 @@
           <h3 class="archive__term-title"><?= $term->title() ?></h3>
           <div class="archive__grads">
             <?php if ($term->grads()->count() > 0) { ?>
-              <?php snippet('blocks/grads-index', ['grads' => $term->grads()]) ?>
+              <?php snippet('blocks/grads-index', [
+                'grads' => $term->grads(),
+                'includeAltImage' => false,
+              ]) ?>
             <?php } else { ?>
               <div class="text-content">
                 <p>No graduates have been added for this term.</p>

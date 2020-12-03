@@ -6,13 +6,20 @@
           <div class="grads-index__grad-media">
             <?php if ($featuredImage = $grad->featured_photo()->toFile()) { ?>
               <div class="grads-index__grad-image grads-index__grad-image--primary">
-                <?php snippet('blocks/responsive-image', ['image' => $featuredImage, 'ratio' => false, 'isLazy' => true]) ?>
+                <?php snippet('blocks/responsive-image', [
+                  'image' => $featuredImage,
+                  'ratio' => false,
+                  'isLazy' => true
+                ]) ?>
               </div>
             <?php } ?>
-
-            <?php if ($altImage = $grad->alt_photo()->toFile()) { ?>
+            <?php if ($includeAltImage ?? true && $altImage = $grad->alt_photo()->toFile()) { ?>
               <div class="grads-index__grad-image grads-index__grad-image--alternate">
-                <?php snippet('blocks/responsive-image', ['image' => $altImage, 'ratio' => false, 'isLazy' => true]) ?>
+                <?php snippet('blocks/responsive-image', [
+                  'image' => $altImage,
+                  'ratio' => false,
+                  'isLazy' => true
+                ]) ?>
               </div>
             <?php } ?>
           </div>
