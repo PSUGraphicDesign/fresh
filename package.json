@@ -13,7 +13,6 @@
     "coffeeify": "^3.0.1",
     "coffeescript": "^1.12.7",
     "mime": "^2.3.1",
-    "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0",
     "uglify-js": "^3.3.12",
@@ -22,7 +21,8 @@
   "dependencies": {
     "between.js": "^0.1.2-fix.2",
     "jquery": "^2.1.4",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "node-sass": "^5.0.0"
   },
   "scripts": {
     "dev": "npm-run-all --parallel styles:watch scripts:watch",
