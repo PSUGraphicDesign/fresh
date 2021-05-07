@@ -21,7 +21,7 @@
   "dependencies": {
     "between.js": "^0.1.2-fix.2",
     "jquery": "^2.1.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "node-sass": "^5.0.0"
   },
   "scripts": {
