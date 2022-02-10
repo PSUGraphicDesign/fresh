@@ -22,7 +22,7 @@
     "between.js": "^0.1.2-fix.2",
     "jquery": "^2.1.4",
     "lodash": "^4.17.11",
-    "node-sass": "^5.0.0"
+    "node-sass": "^7.0.0"
   },
   "scripts": {
     "dev": "npm-run-all --parallel styles:watch scripts:watch",
